@@ -103,8 +103,13 @@
   visibility: hidden;
 }
 
+<<<<<<< HEAD
+#ageVer {
+/*  content: "";*/
+=======
 #ageVerWrap {
   content: "";
+>>>>>>> 65b250bef6c33da935ceb728a7fe483a719a19cd
   display: block;
   position: absolute;
   width:100%;
@@ -113,6 +118,10 @@
   text-align: center;
   margin: 0;
   z-index: 1001;
+<<<<<<< HEAD
+  top: 0%;
+  left: 0%;
+=======
   top: 0;
   left: 0;
   padding: 0;
@@ -123,6 +132,7 @@
   width: 50%;
   background-color: black;
   height: 50%;
+>>>>>>> 65b250bef6c33da935ceb728a7fe483a719a19cd
 }
 
 .ofAge {
