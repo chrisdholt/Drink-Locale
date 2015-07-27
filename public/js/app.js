@@ -1,7 +1,7 @@
 
 var yes = document.getElementById('confirmY');
 yes.addEventListener('click', function(){
-  ageVer = document.getElementById('ageVer');
+  ageVer = document.getElementById('ageVerWrap');
   ageVer.className = 'hide'; //hides the ageVer section if they say they are above 21
 });
 

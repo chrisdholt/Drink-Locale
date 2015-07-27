@@ -46,7 +46,7 @@
   position: relative;
   display: block;
   padding-top: 8%;
-  padding-bottom: 5%;
+  padding-bottom: 2%;
 }
 
 .content {
@@ -90,7 +90,7 @@
 
 .footer {
   text-align: center;
-  padding: 1.5%;
+  padding: 2%;
   margin: 0 auto;
   width: 100%;
   position: relative;
@@ -103,18 +103,36 @@
   visibility: hidden;
 }
 
+<<<<<<< HEAD
 #ageVer {
 /*  content: "";*/
+=======
+#ageVerWrap {
+  content: "";
+>>>>>>> 65b250bef6c33da935ceb728a7fe483a719a19cd
   display: block;
   position: absolute;
   width:100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   text-align: center;
-  margin: 0 auto;
+  margin: 0;
   z-index: 1001;
+<<<<<<< HEAD
   top: 0%;
   left: 0%;
+=======
+  top: 0;
+  left: 0;
+  padding: 0;
+}
+
+#ageVer {
+  margin: 0 auto;
+  width: 50%;
+  background-color: black;
+  height: 50%;
+>>>>>>> 65b250bef6c33da935ceb728a7fe483a719a19cd
 }
 
 .ofAge {
