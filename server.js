@@ -6,21 +6,21 @@ var request = require('request');
 
 app.use(express.static(__dirname + '/public'));
 
-var testBeer;
+// var testBeer;
 
-request('http://api.brewerydb.com/v2/beer/oeGSxs?key=d494efd8b968c2b377afa7208751cd3c', function (error, response, body) {
-  if (!error && response.statusCode == 200) {
-    console.log(body);
-    testBeer = body;
-  }
-});
+// request('http://api.brewerydb.com/v2/beer/oeGSxs?key=d494efd8b968c2b377afa7208751cd3c', function (error, response, body) {
+//   if (!error && response.statusCode == 200) {
+//     console.log(body);
+//     testBeer = body;
+//   }
+// });
 
-app.get('/testbeer', function(request, response) {
-  response.status(200).send(testBeer);
-});
+// app.get('/testbeer', function(request, response) {
+//   response.status(200).send(testBeer);
+// });
 
 app.get('/*', function(req, res) {
-  res.status(404).send("<h1>404 Error</h1>"));
+  res.status(404).send("<h1>404 Error</h1>");
 });
 
 app.listen(process.env.PORT || 5000, function() {
