@@ -1,0 +1,36 @@
+* {
+  border: 1px dashed;
+}
+
+.main {
+  width: 100%;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-content: space-around;
+}
+
+.historyBeer {
+  width: 20%;
+  height: ;
+  position: relative;
+  align-self: auto;
+}
+
+.randomBeer {
+  width: 20%;
+  position: relative;
+  align-self: auto;
+}
+
+.searchBeer {
+  width: 20%;
+  position: relative;
+  align-self: auto;
+}
+
