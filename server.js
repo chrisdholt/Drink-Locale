@@ -6,18 +6,10 @@ var request = require('request');
 
 app.use(express.static(__dirname + '/public'));
 
-var testBeer;
-
-// request('http://api.brewerydb.com/', function (error, response, body) {
-//   if (!error && response.statusCode == 200) {
-//     console.log(body);
-//     testBeer = body;
-//   }
-// });
-
 app.get('/testbeer', function(request, response) {
   response.status(200).send(testBeers);
 });
+
 
 app.get('/*', function(req, res) {
   res.status(404).send("<h1>404 Error</h1>");
