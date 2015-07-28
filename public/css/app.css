@@ -100,8 +100,12 @@
 
 /* AGE VERIFICATION */
 
-.hide {
+.hideAge {
   visibility: hidden;
+}
+
+.showAge {
+  visibility: visible;
 }
 
 #ageVerWrap {
