@@ -3,6 +3,9 @@
 var express = require('express');
 var app = express();
 var request = require('request');
+var fs = require('fs');
+var seattleBeers = require('./api_data/beers-seattle.json');
+console.log(seattleBeers.data.length);
 
 app.use(express.static(__dirname + '/public'));
 
@@ -10,6 +13,9 @@ app.get('/testbeer', function(request, response) {
   response.status(200).send(testBeers);
 });
 
+app.get('/beer', function(request, response) {
+  response.status(200).send(seattleBeers.data[45]);
+});
 
 app.get('/*', function(req, res) {
   res.status(404).send("<h1>404 Error</h1>");
@@ -69,5 +75,19 @@ var getBeersByBreweries = function(breweryIdArray) {
 
 //var getBeersBySingleBrewery = function()
 
-var testBeers = getBeersByBreweries(seattleBreweries);
-console.log(testBeers);
+// var testBeers = getBeersByBreweries(seattleBreweries);
+// console.log(testBeers);
+
+var parseBeers = function(path) {
+  var parsedBeers;
+  fs.readFile(path, function(err, data) {
+    if(!err) {
+      console.log("in the if");
+      parsedBeers = JSON.parse(data);
+    }
+  });
+  return parsedBeers;
+};
+
+//var seattleBeers = parseBeers("./api_data/beers-seattle.json");
+//console.log(seattleBeers.data.length);
