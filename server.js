@@ -89,5 +89,6 @@ var parseBeers = function(path) {
   return parsedBeers;
 };
 
-//var seattleBeers = parseBeers("./api_data/beers-seattle.json");
-//console.log(seattleBeers.data.length);
+var getBeerStyles(beers) {
+  //seattleBeers.data.forEach()
+}
