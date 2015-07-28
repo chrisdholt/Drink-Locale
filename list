@@ -1,142 +1,136 @@
-  '//// IPA ////
-  Imperial IPA',
+//ipa, strongAle, stoutPorter, lagerPilsner, scotch, pale,
+//wheat, belgian, sour, bock, misc
+
+var ipa = [
+  'Imperial IPA',
   'American IPA',
-    'English IPA'
-     'Wet Hop Ale',
-      'Imperial Red',]
- 'Irish Red',
+  'English IPA',
+  'Wet Hop Ale',
+  'Imperial Red',
+  'Irish Red'
+  ];
 
-
-//// STRONG ALE ////
+var strongAle = [
   'American Strong Pale',
-   'Wheatwine',
+  'Wheatwine',
   'BBL Aged Strong',
- 'American Imperial Porter'
-  'Old Ale',,,
-   'Braggot',
- 'BBL Aged Dark'
- 'American Barleywine',
- 'British Barleywine',
- 'BBL Aged'
-  'Aged Beer'
+  'American Imperial Porter',
+  'Old Ale',
+  'Braggot',
+  'BBL Aged Dark',
+  'American Barleywine',
+  'British Barleywine',
+  'BBL Aged',
+  'Aged Beer',
   'Strong Ale',
- 'Malt Liquor',
-,
+  'Malt Liquor'
+  ];
 
-
-
-//// STOUT/PORTER ///
+var stoutPorter = [
   'American Stout',
   'Sweet Stout',
-   'Cream Ale',
+  'Cream Ale',
   'Dry Irish Stout',
   'American Imperial Stout',
   'Export Stout',
   'Oatmeal Stout',
   'Stout',
   'Coffee Beer',
- 'Baltic Porter',
- 'English Brown',
- 'Robust Porter',
- Brown Porter',
- 'American Brown',
+  'Baltic Porter',
+  'English Brown',
+  'Robust Porter',
+  'Brown Porter',
+  'American Brown'
+  ];
 
-
-
- ,
-//// LAGER/PISLNER ///
+var lagerPilsner = [
   'Vienna Lager',
   'Oktoberfest',
-  'American Dark Lager'
- 'German Pilsener',
- 'Kölsch',
- 'International Pilsener',
- 'American Premium Lager',
- 'American Pilsener'
- ' 'Bohemian Pilsener',
-   Märzen'
- 'American Lager',
- 'California Common',
+  'American Dark Lager',
+  'German Pilsener',
+  'Kölsch',
+  'International Pilsener',
+  'American Premium Lager',
+  'American Pilsener',
+  'Bohemian Pilsener',
+  'Märzen',
+  'American Lager',
+  'California Common',
   'Black Ale',
- 'Schwarzbier'
-  'Euro Dark',
+  'Schwarzbier',
+  'Euro Dark'
+  ];
 
-
-
-//// SCOTCH ///
+var scotch = [
  'Scottish Export',
- 'Scotch Ale',
-'
+ 'Scotch Ale'
+ ];
 
-'//// PALE ////
- 'Special Bitter',
- 'English Dark Mild',
- Amber',
- 'Bitter',
+var pale = [
+  'Special Bitter',
+  'English Dark Mild',
+  'Amber',
+  'Bitter',
   'Bière de Garde',
- 'English Pale Mild',
- 'Blonde',
+  'English Pale Mild',
+  'Blonde',
   'ESB',
- '  'Austrailian Pale',
+  'Austrailian Pale',
   'English Pale',
   'American Pale',
- 'German Rye',
- 'Rye Ale',
+  'German Rye',
+  'Rye Ale'
+  ];
 
-  '
-
-,//// WHEAT ///
+var wheat = [
  'Witbier',
  'Wheat Ale',
  'Dunkelweizen',
  'Hefeweizen',
- 'Bernsteinfarbenesweizen',
+ 'Bernsteinfarbenesweizen'
+ ];
 
-
-//// BELGIAN ////
- 'Belgian Pale',
-  'Belgian Blonde'
-    'Belgian Dubbel',
- 'Belgian Pale Strong',
- 'American/Belgian Dark',
- 'Belgian Dark Strong',
-'Belgian Ale',
- 'Belgian Tripel',
+var belgian = [
+  'Belgian Pale',
+  'Belgian Blonde',
+  'Belgian Dubbel',
+  'Belgian Pale Strong',
+  'American/Belgian Dark',
+  'Belgian Dark Strong',
+  'Belgian Ale',
+  'Belgian Tripel',
   'Saison',
-American/Belgian Pale',
-,
+  'American/Belgian Pale',
+];
 
-
-//// SOUR ////
- 'BBL Aged Sour',
- 'Sour',
- Brett'
+var sour = [
+  'BBL Aged Sour',
+  'Sour',
+  'Brett'
   'Berlinerweisse'
+];
 
-
-///BOCK////
- 'Doppelbock',
- 'Maibock'
- 'Bock',
+var bock = [
+  'Doppelbock',
+  'Maibock'
+  'Bock',
   'Weizenbock',
- 'Altbier',
+  'Altbier'
+];
 
-
-
-//// MISC ////
- 'Specialty',
+var misc = [
+  'Specialty',
   'Spice Beer',
-, 'Pumpkin Beer',
- 'Smoke Beer',
- 'Fruit Beer',
+  'Pumpkin Beer',
+  'Smoke Beer',
+  'Fruit Beer',
   'Fruit Wheat Ale'
- 'Common Cider',
- 'New England Cider',
-, 'Experimental Beer',
- 'Flavored Malt Beverage',
- 'Experimental Beer',
-
-,
+  'Common Cider',
+  'New England Cider',
+  'Experimental Beer',
+  'Flavored Malt Beverage',
+  'Experimental Beer'
+];
 
 
 

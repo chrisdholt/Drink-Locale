@@ -3,19 +3,9 @@
 var express = require('express');
 var app = express();
 var request = require('request');
-var fs = require('fs');
-var seattleBeers = require('./api_data/beers-seattle.json');
-console.log(seattleBeers.data.length);
+//var seattleBeers = require('./api_data/beers-seattle.json');
 
 app.use(express.static(__dirname + '/public'));
-
-app.get('/testbeer', function(request, response) {
-  response.status(200).send(testBeers);
-});
-
-app.get('/beer', function(request, response) {
-  response.status(200).send(seattleBeers.data[45]);
-});
 
 app.get('/*', function(req, res) {
   res.status(404).send("<h1>404 Error</h1>");
@@ -27,7 +17,7 @@ app.listen(process.env.PORT || 5000, function() {
 
 
 //
-//HERE IS OUR API PARSING CODE
+//HERE IS OUR BREWERYDB API PARSING CODE
 //
 
 
@@ -66,7 +56,6 @@ var getBeersByBreweries = function(breweryIdArray) {
       }
     });
   });
-  console.log(beerArray);
   return beerArray;
 };
 
@@ -79,7 +68,6 @@ var parseBeers = function(path) {
   var parsedBeers;
   fs.readFile(path, function(err, data) {
     if(!err) {
-      console.log("in the if");
       parsedBeers = JSON.parse(data);
     }
   });
@@ -109,4 +97,3 @@ var getBeerStyles = function(beers) {
   return styleArray;
 };
 
-console.log(getBeerStyles(seattleBeers));
