@@ -22,7 +22,5 @@ $.ajax({
     console.log(error);
   });
 
-console.dir(seattleBeer);
-console.log(seattleBeer[302].name);
 
 });
