@@ -85,6 +85,12 @@ h3 {
   color: white;
 }
 
+.histInner {
+  text-align: center;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
 .randomBeer {
   width: 25%;
   height: 400px;
@@ -94,6 +100,12 @@ h3 {
   background-color: rgba(0, 0, 0, 0.7);
   margin: 2%;
   color: white;
+}
+
+.randInner {
+  text-align: center;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 
 .searchBeer {
@@ -107,13 +119,20 @@ h3 {
   color: white;
 }
 
+.searchInner {
+  text-align: center;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
 .footer {
   text-align: center;
   padding: 2%;
   margin: 0 auto;
   width: 100%;
-  position: relative;
+  position: fixed;
   background-color: white;
+  bottom: 0;
 }
 
 /* AGE VERIFICATION */
