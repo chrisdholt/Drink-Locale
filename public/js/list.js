@@ -1,5 +1,6 @@
 //ipa, strongAle, stoutPorter, lagerPilsner, scotch, pale,
 //wheat, belgian, sour, bock, misc
+//var exports = module.exports = {};
 
 var ipa = [
   'Imperial IPA',
