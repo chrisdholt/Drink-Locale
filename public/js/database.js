@@ -6,6 +6,9 @@ var apiKey = '?apiKey=RjwSNykUJAE_wUTwNZhqr-h0pqxjJzne';
 var contentType = 'application/json';
 var dataType = 'json';
 var seattleBeer;
+var list = require('./list.js');
+
+console.log(list.ipa);
 
 $.ajax({
     url: db + collection + apiKey,
