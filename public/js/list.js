@@ -1,8 +1,8 @@
 //ipa, strongAle, stoutPorter, lagerPilsner, scotch, pale,
 //wheat, belgian, sour, bock, misc
-var exports = module.exports = {};
+//var exports = module.exports = {};
 
-exports.ipa = [
+var ipa = [
   'Imperial IPA',
   'American IPA',
   'English IPA',
@@ -11,7 +11,7 @@ exports.ipa = [
   'Irish Red'
   ];
 
-exports.strongAle = [
+var strongAle = [
   'American Strong Pale',
   'Wheatwine',
   'BBL Aged Strong',
@@ -27,7 +27,7 @@ exports.strongAle = [
   'Malt Liquor'
   ];
 
-exports.stoutPorter = [
+var stoutPorter = [
   'American Stout',
   'Sweet Stout',
   'Cream Ale',
@@ -44,7 +44,7 @@ exports.stoutPorter = [
   'American Brown'
   ];
 
-exports.lagerPilsner = [
+var lagerPilsner = [
   'Vienna Lager',
   'Oktoberfest',
   'American Dark Lager',
@@ -62,12 +62,12 @@ exports.lagerPilsner = [
   'Euro Dark'
   ];
 
-exports.scotch = [
+var scotch = [
  'Scottish Export',
  'Scotch Ale'
  ];
 
-exports.pale = [
+var pale = [
   'Special Bitter',
   'English Dark Mild',
   'Amber',
@@ -83,7 +83,7 @@ exports.pale = [
   'Rye Ale'
   ];
 
-exports.wheat = [
+var wheat = [
  'Witbier',
  'Wheat Ale',
  'Dunkelweizen',
@@ -91,7 +91,7 @@ exports.wheat = [
  'Bernsteinfarbenesweizen'
  ];
 
-exports.belgian = [
+var belgian = [
   'Belgian Pale',
   'Belgian Blonde',
   'Belgian Dubbel',
@@ -104,14 +104,14 @@ exports.belgian = [
   'American/Belgian Pale',
 ];
 
-exports.sour = [
+var sour = [
   'BBL Aged Sour',
   'Sour',
   'Brett'
   'Berlinerweisse'
 ];
 
-exports.bock = [
+var bock = [
   'Doppelbock',
   'Maibock'
   'Bock',
@@ -119,7 +119,7 @@ exports.bock = [
   'Altbier'
 ];
 
-exports.misc = [
+var misc = [
   'Specialty',
   'Spice Beer',
   'Pumpkin Beer',
