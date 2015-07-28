@@ -86,9 +86,14 @@ h3 {
 }
 
 .histInner {
+  position: relative;
+  top: 50%;
   text-align: center;
   padding-left: 4%;
   padding-right: 4%;
+  transform: translateY(-40%);
+/*  padding-top: 10%;
+  padding-bottom: 10%;*/
 }
 
 .randomBeer {
@@ -103,9 +108,14 @@ h3 {
 }
 
 .randInner {
+  position: relative;
+  top: 50%;
   text-align: center;
   padding-left: 4%;
   padding-right: 4%;
+  transform: translateY(-40%);
+/*  padding-top: 10%;
+  padding-bottom: 10%;*/
 }
 
 .searchBeer {
@@ -120,9 +130,14 @@ h3 {
 }
 
 .searchInner {
+  position: relative;
+  top: 50%;
   text-align: center;
   padding-left: 4%;
   padding-right: 4%;
+  transform: translateY(-40%);
+/*  padding-top: 10%;
+  padding-bottom: 10%;*/
 }
 
 .footer {
