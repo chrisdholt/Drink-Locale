@@ -2,6 +2,22 @@
   border: 1px dashed;
 }*/
 
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+}
+
+
 .main {
   width: 100%;
   background-image: url(/images/home_1.jpg);
@@ -62,11 +78,12 @@
 .historyBeer {
   width: 25%;
   height: 400px;
-  background-color: rgba(155, 155, 155, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   position: relative;
   align-self: auto;
   margin: 2%;
+  color: white;
 }
 
 .randomBeer {
@@ -75,8 +92,9 @@
   display: flex;
   position: relative;
   align-self: center;
-  background-color: rgba(155, 155, 155, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
   margin: 2%;
+  color: white;
 }
 
 .searchBeer {
@@ -85,8 +103,9 @@
   display: flex;
   position: relative;
   align-self: auto;
-  background-color: rgba(155, 155, 155, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
   margin: 2%;
+  color: white;
 }
 
 .footer {
