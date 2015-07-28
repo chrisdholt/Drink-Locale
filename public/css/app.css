@@ -1,7 +1,6 @@
 /** {
   border: 1px dashed;
 }*/
-
 h1 {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
@@ -18,9 +17,9 @@ h3 {
 }
 
 
-.main {
+.main-index {
   width: 100%;
-  background-image: url(/images/home_1.jpg);
+  background-image: url(/images/beerTaps.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0 auto;
@@ -151,6 +150,8 @@ h3 {
   margin-top: 10%;
   padding-top: 3%;
   padding-bottom: 5%;
+  background-image: url(/images/beer.gif);
+  background-repeat: no-repeat;
 }
 
 .ofAge {
@@ -169,6 +170,14 @@ h3 {
 }
 
 /* BEER PAGE */
+.main-beer {
+  width: 100%;
+  background-image: url(/images/beerBack.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
 .beerWrap {
   position: relative;
   display: block;
@@ -201,6 +210,14 @@ h3 {
 }
 
 /* RANDOM BEER PAGE */
+.main-randomBeer {
+  width: 100%;
+  background-image: url(/images/craftBeer.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
 .randWrap {
   position: relative;
   display: block;
@@ -236,6 +253,14 @@ h3 {
 }
 
 /* ABOUT PAGE */
+.main-about {
+  width: 100%;
+  background-image: url(/images/beerWall.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
 .aboutWrap {
   position: relative;
   display: block;

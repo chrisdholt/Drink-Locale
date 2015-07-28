@@ -1,13 +1,26 @@
-var db = 'https://api.mongolab.com/api/1/databases/drinklocale/collections';
-var collection = "/test/55b7ca97e4b068317b8727d3";
-var apiKey = '?apiKey=r-F49Lou1bSYoiHF-52v0dw9IegCiTI1';
+$(document).ready(function() {
+
+var db = 'https://api.mongolab.com/api/1/databases/beer-seattle/collections';
+var collection = "/beer/55b7e76e7e1ee7f743ec566e";
+var apiKey = '?apiKey=RjwSNykUJAE_wUTwNZhqr-h0pqxjJzne';
 var contentType = 'application/json';
 var dataType = 'json';
-var x = $.ajax({
+var seattleBeer;
+
+$.ajax({
     url: db + collection + apiKey,
     type:'GET',
+    async: false,
     contentType: contentType,
     dataType: dataType,
-    success: console.log("Connected to database")
+    success: console.log("Connected to MongoDB")
+  }).done(function(response) {
+    console.log("in the done statement");
+    seattleBeer = response.data;
+  })
+  .fail(function(error) {
+    console.log(error);
   });
-console.log(JSON.parse(x.responseText));
+
+
+});
