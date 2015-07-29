@@ -7,11 +7,11 @@ if (!localStorage['ageCheck']) {
 
 function checkAge() {
   var ageVer = document.getElementById('ageVerWrap');
-  ageVer.className = 'showAge';
+  ageVer.className = 'show';
 
   var yes = document.getElementById('confirmY');
   yes.addEventListener('click', function(){
-    ageVer.className = 'hideAge'; //hides the ageVer section if they say they are above 21
+    ageVer.className = 'hide'; //hides the ageVer section if they say they are above 21
   });
 
   var no = document.getElementById('confirmNot');
@@ -38,4 +38,3 @@ beerArray.push(new Beer('beer4', 5, 'nice smell', 5, 'blonde', 'brewery4','/beer
 
 var beerIndex = Math.floor(Math.random() * (beerArray.length));
 console.log(beerArray[beerIndex].brewery);
-
