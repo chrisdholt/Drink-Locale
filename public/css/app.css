@@ -148,10 +148,9 @@ h3 {
 /* LOADING AJAX */
 
 .loading {
-  visibility: hidden;
   content: "";
   text-align: center;
-  display: block;
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
