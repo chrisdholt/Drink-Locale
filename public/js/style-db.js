@@ -112,8 +112,8 @@ var requestBeersByStyle = function(style) {
         misc = response.data;
         break;
     }
-  }
     $(document).ajaxStop(function () {
       $("#loading").hide();
     });
+  });
 }
