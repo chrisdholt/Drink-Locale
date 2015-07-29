@@ -199,15 +199,18 @@ var getRandomBeer = function(){
  // puts beer in history of beers that have been suggested or tried
   console.log("first random beer:");
   console.log(seattleBeer[randomBeerIndex])
-};
-
-getRandomBeer();  // needs to be linked to an event listener\
 
 console.log("total history before suggestion:");
 console.log(totalHistoryArray);
 
 console.log("tried history array:")
 console.log(triedHistoryArray);
+};
+
+getRandomBeer();  // needs to be linked to an event listener\
+
+
+suggestSimilar();
 
 function suggestSimilar() {
   // if no beers have been TRIED yet, you need to do that first!
@@ -235,22 +238,23 @@ function suggestSimilar() {
     }
   }
 
-  if (suggestedBeer.style.shortName === randomBeerTried.style.shortName) {
-  // && ((randomBeerTried.abv - 0.5) <= suggesteBeer.abv <= (randomBeerTried.abv + 0.5)) {     //run this if suggestedBeer style  AND abv (+/- 0.5%) matchs the style AND abv of the already-tried beer
+  if (suggestedBeer.style.shortName){
+    if (suggestedBeer.style.shortName === randomBeerTried.style.shortName) {
 
     totalHistoryArray.push(suggestedBeer); //put the new beer suggestion in tthe list of beers that have bene suggested so far
 
    ///////CODE TO ADD SUGGESTED BEER TO INNERHTML OR WHATEVER GOES HERE/////////////////////
 
-    } else {
+    }
+  } else {
     return suggestSimilar();  //try again if both abv and style don't match!
   }
 
 
 }
-suggestSimilar();
-console.log("total history after suggestion:");
-console.log(totalHistoryArray);
+
+// console.log("total history after suggestion:");
+// console.log(totalHistoryArray);
 
 
 });
