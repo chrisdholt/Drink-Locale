@@ -1,5 +1,14 @@
 $(document).ready(function() {
 
+//In Asynch, this will load the gif and allow it to run when ajax call is happening.
+  // $(document).ajaxStart(function () {
+  //     $("#loading").show();
+  // });
+
+  // $(document).ajaxStop(function () {
+  //     $("#loading").hide();
+  // });
+
 var db = 'https://api.mongolab.com/api/1/databases/beer-seattle/collections';
 var collection = "/beer/55b7e76e7e1ee7f743ec566e";
 var apiKey = '?apiKey=RjwSNykUJAE_wUTwNZhqr-h0pqxjJzne';
@@ -140,6 +149,7 @@ var misc = [
   'Flavored Malt Beverage',
   'Experimental Beer'
 ];
+
 
 $.ajax({
   url: db + collection + apiKey,
