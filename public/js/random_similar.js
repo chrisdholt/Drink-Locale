@@ -1,24 +1,4 @@
-var beerArray = [];
-var Beer = function(name, abv, description, ibu, style, brewery, labelurl){
-  this.name = name;
-  this.abv = abv;
-  this.description;
-  this.ibu = ibu;
-  this.style = style;
-  this.brewery = brewery;
-  this.labelurl = labelurl;
-};
 
-beerArray.push(new Beer('beer1', 1, 'hoppy2', 100, 'ipa', 'brewery1','/beer1.jpg'));
-beerArray.push(new Beer('beer2', 100, 'yummy', 0, 'porter', 'brewery2','/beer2.jpg'));
-beerArray.push(new Beer('beer3', 10, 'good', 14, 'ale','brewery3','/beer3.jpg'));
-beerArray.push(new Beer('beer4', 5, 'nice smell', 5, 'blonde', 'brewery4','/beer4.jpg'));
-
-var beerIndex = Math.floor(Math.random() * (beerArray.length));
-console.log(beerArray[beerIndex].name);
-
-
-////// Kasim's code above, Craig's below
 
 var triedHistoryArray = [];  // THIS HAS TO BE THE BEERS ACUTALLY TRIED, NOT JUST SUGGESTED!
 

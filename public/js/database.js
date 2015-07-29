@@ -149,7 +149,6 @@ $.ajax({
   dataType: dataType,
   success: console.log("Connected to MongoDB")
 }).done(function(response) {
-  console.log("in the done statement");
   seattleBeer = response.data;
 })
   .fail(function(error) {
@@ -171,8 +170,29 @@ var getBeersByStyleGroup = function(style) {
 };
 
 
-console.log(getBeersByStyleGroup(ipa));
-console.log(getBeersByStyleGroup(sour));
+//////// Craig's random beer code below /////
+var ipaGroup = getBeersByStyleGroup(ipa)
+var strongAleGroup =getBeersByStyleGroup(strongAle)
+var stoutPorterGroup = getBeersByStyleGroup(stoutPorter)
+var lagerPilsnerGroup = getBeersByStyleGroup(lagerPilsner)
+var scotchGroup = getBeersByStyleGroup(scotch)
+var paleGroup = getBeersByStyleGroup(pale)
+var wheatGroup = getBeersByStyleGroup(wheat)
+var belgianGroup = getBeersByStyleGroup(belgian)
+var sourGroup = getBeersByStyleGroup(sour)
+var bockGroup = getBeersByStyleGroup(bock)
+var miscGroup = getBeersByStyleGroup(misc)
+
+
+
+var getRandomBeer = function(){
+  var randomBeerIndex = Math.floor(Math.random() * (seattleBeer.length));
+  totalHistoryArray.push(seattleBeer[randomBeerIndex]) // puts beer in history of beers that have been suggested or tried
+  console.log(seattleBeer[randomBeerIndex].name);
+
+
+};
+getRandomBeer();  // needs to be linked to an event listener
 
 
 
