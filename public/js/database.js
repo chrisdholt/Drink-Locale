@@ -21,6 +21,8 @@ $(document).ready(function() {
       bock,
       misc;
 
+var beerHistory = [];
+
   //MongoDB oid's for each style document in the db
   var ipaId = "/ipa/55b84eb37e1ee7f743ec5671";
   var strongAleId = "/strong-ale/55b8540a7e1ee7f743ec5672";
@@ -223,16 +225,15 @@ var getRandomBeerByStyle = function(style){
   console.log(workingArray);
 
   var randomBeerIndex = Math.floor(Math.random() * (workingArray.length));
+  if(!localStorage["beerHistory"]) {
+    localStorage["beerHistory"] = JSON.stringify([]);
+    beerHistory = localStorage["beerHistory"];
+  }
   beerHistory = JSON.parse(localStorage["beerHistory"]);
   beerHistory.push(workingArray[randomBeerIndex]);
   localStorage["beerHistory"] = JSON.stringify(beerHistory);
   return workingArray[randomBeerIndex];
 };
-
-var test = localStorage.getItem("beerHistory");
-var parsed = JSON.parse(test);
-console.log(parsed);
-
 
 //Event Listener randomBeer.html buttons//
   $('.randBtn').on('click', function(e){
