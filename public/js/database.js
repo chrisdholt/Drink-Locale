@@ -1,4 +1,17 @@
+$(document).ajaxStart(function () {
+    $("#loading").show();
+});
+
 $(document).ready(function() {
+
+//In Asynch, this will load the gif and allow it to run when ajax call is happening.
+  // $(document).ajaxStart(function () {
+  //     $("#loading").show();
+  // });
+
+  // $(document).ajaxStop(function () {
+  //     $("#loading").hide();
+  // });
 
 var db = 'https://api.mongolab.com/api/1/databases/beer-seattle/collections';
 var collection = "/beer/55b7e76e7e1ee7f743ec566e";
@@ -141,10 +154,11 @@ var misc = [
   'Experimental Beer'
 ];
 
+
 $.ajax({
   url: db + collection + apiKey,
   type:'GET',
-  async: false,
+  async: true,
   contentType: contentType,
   dataType: dataType,
   success: console.log("Connected to MongoDB")
@@ -152,10 +166,10 @@ $.ajax({
 
 .done(function(response) {
   seattleBeer = response.data;
-})
-  .fail(function(error) {
-  console.log(error);
-});
+  $(document).ajaxStop(function () {
+  $("#loading").hide();
+  });
+
 
 var getBeersByStyleGroup = function(style) {
   var styleArray = [];
@@ -171,19 +185,26 @@ var getBeersByStyleGroup = function(style) {
   return styleArray;
 };
 
+})
+  .fail(function(error) {
+  console.log(error);
+});
 
 //////// Craig's random beer code below /////
-var ipaGroup = getBeersByStyleGroup(ipa)
-var strongAleGroup =getBeersByStyleGroup(strongAle)
-var stoutPorterGroup = getBeersByStyleGroup(stoutPorter)
-var lagerPilsnerGroup = getBeersByStyleGroup(lagerPilsner)
-var scotchGroup = getBeersByStyleGroup(scotch)
-var paleGroup = getBeersByStyleGroup(pale)
-var wheatGroup = getBeersByStyleGroup(wheat)
-var belgianGroup = getBeersByStyleGroup(belgian)
-var sourGroup = getBeersByStyleGroup(sour)
-var bockGroup = getBeersByStyleGroup(bock)
-var miscGroup = getBeersByStyleGroup(misc)
+// var ipaGroup = getBeersByStyleGroup(ipa)
+// var strongAleGroup =getBeersByStyleGroup(strongAle)
+// var stoutPorterGroup = getBeersByStyleGroup(stoutPorter)
+// var lagerPilsnerGroup = getBeersByStyleGroup(lagerPilsner)
+// var scotchGroup = getBeersByStyleGroup(scotch)
+// var paleGroup = getBeersByStyleGroup(pale)
+// var wheatGroup = getBeersByStyleGroup(wheat)
+// var belgianGroup = getBeersByStyleGroup(belgian)
+// var sourGroup = getBeersByStyleGroup(sour)
+// var bockGroup = getBeersByStyleGroup(bock)
+// var miscGroup = getBeersByStyleGroup(misc)
+
+
+
 
 
 var triedHistoryArray = [];  // THIS HAS TO BE THE BEERS ACUTALLY TRIED, NOT JUST SUGGESTED!
@@ -207,10 +228,15 @@ console.log("tried history array:")
 console.log(triedHistoryArray);
 };
 
-getRandomBeer();  // needs to be linked to an event listener\
+
+setTimeout(function() { getRandomBeer(); }, 15000);
+// getRandomBeer();  // needs to be linked to an event listener\
 
 
-suggestSimilar();
+setTimeout(function() { suggestSimilar(); }, 16000);
+
+
+// suggestSimilar();
 
 function suggestSimilar() {
   // if no beers have been TRIED yet, you need to do that first!
@@ -234,27 +260,48 @@ function suggestSimilar() {
 
   for (var i = 0; i < totalHistoryArray.length; i++){
     if (suggestedBeer === totalHistoryArray[i]){
-    return suggestSimilar() ; //if already been suggested/tried, then find another random beer
+      return suggestSimilar() ; //if already been suggested/tried, then find another random beer
     }
   }
 
   if (suggestedBeer.style.shortName){
+    console.log("in the first if statement");
     if (suggestedBeer.style.shortName === randomBeerTried.style.shortName) {
-
-    totalHistoryArray.push(suggestedBeer); //put the new beer suggestion in tthe list of beers that have bene suggested so far
-
-   ///////CODE TO ADD SUGGESTED BEER TO INNERHTML OR WHATEVER GOES HERE/////////////////////
-
+      console.log("the short names match");
+      totalHistoryArray.push(suggestedBeer); //put the new beer suggestion in tthe list of beers that have bene suggested so far
+    } else {
+        console.log("in the else statement");
+        return suggestSimilar();  //try again if both abv and style don't match!
     }
-  } else {
-    return suggestSimilar();  //try again if both abv and style don't match!
   }
 
-
+console.log("final total beer history array");
+console.log(totalHistoryArray);
 }
 
 // console.log("total history after suggestion:");
 // console.log(totalHistoryArray);
+
+
+
+// var getBeersByStyleGroup = function(style) {
+//   var styleArray = [];
+//   for(var i=0; i < seattleBeer.length; i++) {
+//     for(var j=0; j < style.length; j++) {
+//       if(seattleBeer[i].style) {
+//         if(style[j] == seattleBeer[i].style.shortName) {
+//           styleArray.push(seattleBeer[i]);
+//         }
+//       }
+//     }
+//   }
+//   return styleArray;
+// };
+
+
+// console.log(getBeersByStyleGroup(ipa));
+// console.log(getBeersByStyleGroup(sour));
+
 
 
 });

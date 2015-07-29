@@ -8,7 +8,7 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800' rel='stylesheet' type='text/css'>
   </head>
   <body class="main-randomBeer">
-    <section id='ageVerWrap' class="hideAge">
+    <section id='ageVerWrap' class="hide">
       <section id='ageVer'>
         <h1 class="ofAge">I Am Of Legal Drinking Age</h1>
         <p><button id="confirmY" class="ageBtn">YES</button>
@@ -27,15 +27,21 @@
     <section class="randWrap">
       <section class="randContent">
         <h1>PICK A STYLE</h1>
-        <p><button class="randBtn">BELGIAN</button></p>
-        <p><button class="randBtn">CDA</button></p>
-        <p><button class="randBtn">LAGER</button></p>
-        <p><button class="randBtn">PALE ALE</button></p>
-        <p><button class="randBtn">INDIA PALE ALE</button></p>
-        <p><button class="randBtn">PORTER</button></p>
-        <p><button class="randBtn">RED ALE</button></p>
-        <p><button class="randBtn">STOUT</button></p>
-        <p><button class="randBtn">STRONG ALE</button></p>
+        <section class="randL">
+          <h3><button id="ipaBtn" class="randBtn">India Pale Ale</button></h3>
+          <h3><button id="strongBtn" class="randBtn">Strong Ale</button></h3>
+          <h3><button id="stoutPortBtn" class="randBtn">Stout/Porter</button></h3>
+          <h3><button id="scotchBtn" class="randBtn">Scotch Ale</button></h3>
+          <h3><button id="paleBtn" class="randBtn">Pale Ale</button></h3>
+        </section>
+        <section class="randR">
+          <h3><button id="ipaBtn" class="randBtn">Lager/Pilsner</button></h3>
+          <h3><button id="wheatBtn" class="randBtn">Wheat Ale</button></h3>
+          <h3><button id="belgBtn" class="randBtn">Belgian</button></h3>
+          <h3><button id="sourBtn" class="randBtn">Sour</button></h3>
+          <h3><button id="bockBn" class="randBtn">Bock</button></h3>
+        </section>
+        <h3><button id="otherBtn" class="randBtnOther">I Want Something Else</button></h3>
       </section>
     </section>
     <footer class="footer">

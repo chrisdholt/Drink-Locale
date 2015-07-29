@@ -7,11 +7,11 @@ if (!localStorage['ageCheck']) {
 
 function checkAge() {
   var ageVer = document.getElementById('ageVerWrap');
-  ageVer.className = 'showAge';
+  ageVer.className = 'show';
 
   var yes = document.getElementById('confirmY');
   yes.addEventListener('click', function(){
-    ageVer.className = 'hideAge'; //hides the ageVer section if they say they are above 21
+    ageVer.className = 'hide'; //hides the ageVer section if they say they are above 21
   });
 
   var no = document.getElementById('confirmNot');
@@ -20,4 +20,3 @@ function checkAge() {
   });
 }
 
-/// removed Kasim's code (beerARray and Beer Constructor)  because  it is no longer needed - all the beers are stored in the variable  seattleBeer
