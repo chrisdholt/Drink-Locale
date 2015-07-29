@@ -1,7 +1,3 @@
-$(document).ajaxStart(function () {
-    $("#loading").show();
-});
-
 $(document).ready(function() {
 
 
@@ -40,139 +36,140 @@ $(document).ready(function() {
 
   //Populate a style array with data from MongoDB
   var requestBeersByStyle = function(style) {
+
+  switch(style) {
+    case "ipa":
+      if(ipa) {
+        return;
+      } else {
+        collection = ipaId;
+      }
+      break;
+    case "strongAle":
+      if(strongAle) {
+        return;
+      } else {
+      collection = strongAleId;
+      }
+      break;
+    case "stoutPorter":
+      if(stoutPorter) {
+        return;
+      } else {
+        collection = stoutPorterId;
+      }
+      break;
+    case "lagerPilsner":
+      if(lagerPilsner) {
+        return;
+      } else {
+      collection = lagerPilsnerId;
+      }
+      break;
+    case "scotch":
+      if(scotch) {
+        return;
+      } else {
+        collection = scotchId;
+      }
+      break;
+    case "pale":
+      if(pale) {
+        return;
+      } else {
+        collection = paleId;
+      }
+      break;
+    case "wheat":
+      if(wheat) {
+        return;
+      } else {
+        collection = wheatId;
+      }
+      break;
+    case "belgian":
+      if(belgian) {
+        return;
+      } else {
+        collection = belgianId;
+      }
+      break;
+    case "sour":
+      if(sour) {
+        return;
+      } else {
+        collection = sourId;
+      }
+      break;
+    case "bock":
+      if(bock) {
+        return;
+      } else {
+        collection = bockId;
+      }
+      break;
+    case "misc":
+      if(misc) {
+        return;
+      } else {
+      collection = miscId;
+    }
+      break;
+  }
+
+  $.ajax({
+    url: db + collection + apiKey,
+    type:'GET',
+    async: true,
+    contentType: contentType,
+    dataType: dataType,
+    success: console.log("Connected to MongoDB")
+  })
+  .done(function(response) {
+    // console.log("in done");
     switch(style) {
       case "ipa":
-        if(ipa) {
-          return;
-        } else {
-          collection = ipaId;
-        }
+        // console.log("ipa bitches!");
+        ipa = response.data;
+        // console.log(ipa);
         break;
       case "strongAle":
-        if(strongAle) {
-          return;
-        } else {
-        collection = strongAleId;
-        }
+        strongAle = response.data;
         break;
       case "stoutPorter":
-        if(stoutPorter) {
-          return;
-        } else {
-          collection = stoutPorterId;
-        }
+        stoutPorter = response.data;
         break;
       case "lagerPilsner":
-        if(lagerPilsner) {
-          return;
-        } else {
-        collection = lagerPilsnerId;
-        }
+        lagerPilsner = response.data;
         break;
       case "scotch":
-        if(scotch) {
-          return;
-        } else {
-          collection = scotchId;
-        }
+        scotch = response.data;
         break;
       case "pale":
-        if(pale) {
-          return;
-        } else {
-          collection = paleId;
-        }
+        pale = response.data;
         break;
       case "wheat":
-        if(wheat) {
-          return;
-        } else {
-          collection = wheatId;
-        }
+        wheat = response.data;
         break;
       case "belgian":
-        if(belgian) {
-          return;
-        } else {
-          collection = belgianId;
-        }
+        belgian = response.data;
         break;
       case "sour":
-        if(sour) {
-          return;
-        } else {
-          collection = sourId;
-        }
+        sour = response.data;
         break;
       case "bock":
-        if(bock) {
-          return;
-        } else {
-          collection = bockId;
-        }
+        bock = response.data;
         break;
       case "misc":
-        if(misc) {
-          return;
-        } else {
-        collection = miscId;
-      }
+        misc = response.data;
         break;
     }
-
-    $.ajax({
-      url: db + collection + apiKey,
-      type:'GET',
-      async: true,
-      contentType: contentType,
-      dataType: dataType,
-      success: console.log("Connected to MongoDB")
-    })
-    .done(function(response) {
-      // console.log("in done");
-      switch(style) {
-        case "ipa":
-          // console.log("ipa bitches!");
-          ipa = response.data;
-          // console.log(ipa);
-          break;
-        case "strongAle":
-          strongAle = response.data;
-          break;
-        case "stoutPorter":
-          stoutPorter = response.data;
-          break;
-        case "lagerPilsner":
-          lagerPilsner = response.data;
-          break;
-        case "scotch":
-          scotch = response.data;
-          break;
-        case "pale":
-          pale = response.data;
-          break;
-        case "wheat":
-          wheat = response.data;
-          break;
-        case "belgian":
-          belgian = response.data;
-          break;
-        case "sour":
-          sour = response.data;
-          break;
-        case "bock":
-          bock = response.data;
-          break;
-        case "misc":
-          misc = response.data;
-          break;
-      }
-      $(document).ajaxStop(function () {
-        $("#loading").hide();
-      });
-    })
-    .fail(function(error) {
-    console.log(error);
+    $(document).ajaxStop(function () {
+      $("#loading").hide();
+    });
+  })
+  .fail(function(error) {
+  console.log(error);
   });
 };
 
@@ -226,36 +223,42 @@ var getRandomBeerByStyle = function(style){
   console.log(workingArray);
 
   var randomBeerIndex = Math.floor(Math.random() * (workingArray.length));
-  // totalHistoryArray.push(workingArray[randomBeerIndex]);
-
-return workingArray[randomBeerIndex];
-
+  beerHistory = JSON.parse(localStorage["beerHistory"]);
+  beerHistory.push(workingArray[randomBeerIndex]);
+  localStorage["beerHistory"] = JSON.stringify(beerHistory);
+  return workingArray[randomBeerIndex];
 };
+
+var test = localStorage.getItem("beerHistory");
+var parsed = JSON.parse(test);
+console.log(parsed);
+
 
 //Event Listener randomBeer.html buttons//
   $('.randBtn').on('click', function(e){
     requestBeersByStyle(e.target.id);
     setTimeout(function() {
-    var beer = getRandomBeerByStyle(e.target.id);
-    // window.open('beer.html', '_self');
-    // $('')
-    console.log(beer);
+      var beer = getRandomBeerByStyle(e.target.id);
+      var beerId = beer.id;
+      window.open('beer.html' + '?id=' + beerId);
+      // $(".pageTitle").html(beer.name);
+      console.log(beer);
     }, 7000);
   });
 
-function suggestSimilar(style) {
-  // if no beers have been TRIED yet, you need to do that first!
-  if (!triedHistoryArray)  {
-    console.log("nothing tried yet!");
-    alert("you need to try something before we can make any suggestions based on what you've tried!");
-    return;
-  }
+  function suggestSimilar(style) {
+    // if no beers have been TRIED yet, you need to do that first!
+    if (!triedHistoryArray)  {
+      console.log("nothing tried yet!");
+      alert("you need to try something before we can make any suggestions based on what you've tried!");
+      return;
+    }
 
-  var randTriedBeerIndex = Math.floor(Math.random() * (triedHistoryArray.length));
-  var randomBeerTried = triedHistoryArray[randTriedBeerIndex];// gets random beer that has been tried already (not just suggested)
+    var randTriedBeerIndex = Math.floor(Math.random() * (triedHistoryArray.length));
+    var randomBeerTried = triedHistoryArray[randTriedBeerIndex];// gets random beer that has been tried already (not just suggested)
 
-  var randomBeerIndex2 = Math.floor(Math.random() * (style.length));
-  var suggestedBeer  = style[randomBeerIndex2] // get another random beer (from all beers in seattleBeer)
+    var randomBeerIndex2 = Math.floor(Math.random() * (style.length));
+    var suggestedBeer  = style[randomBeerIndex2] // get another random beer (from all beers in seattleBeer)
 
   console.log("suggested beer:")
   console.log(suggestedBeer);
