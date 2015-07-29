@@ -162,8 +162,9 @@ $.ajax({
   contentType: contentType,
   dataType: dataType,
   success: console.log("Connected to MongoDB")
-}).done(function(response) {
-  console.log("in the done statement");
+})
+
+.done(function(response) {
   seattleBeer = response.data;
   $(document).ajaxStop(function () {
   $("#loading").hide();
@@ -184,18 +185,104 @@ var getBeersByStyleGroup = function(style) {
   return styleArray;
 };
 
-
-console.log(getBeersByStyleGroup(ipa));
-console.log(getBeersByStyleGroup(sour));
-
-
-
-
-
 })
   .fail(function(error) {
   console.log(error);
 });
+
+//////// Craig's random beer code below /////
+// var ipaGroup = getBeersByStyleGroup(ipa)
+// var strongAleGroup =getBeersByStyleGroup(strongAle)
+// var stoutPorterGroup = getBeersByStyleGroup(stoutPorter)
+// var lagerPilsnerGroup = getBeersByStyleGroup(lagerPilsner)
+// var scotchGroup = getBeersByStyleGroup(scotch)
+// var paleGroup = getBeersByStyleGroup(pale)
+// var wheatGroup = getBeersByStyleGroup(wheat)
+// var belgianGroup = getBeersByStyleGroup(belgian)
+// var sourGroup = getBeersByStyleGroup(sour)
+// var bockGroup = getBeersByStyleGroup(bock)
+// var miscGroup = getBeersByStyleGroup(misc)
+
+
+
+
+
+var triedHistoryArray = [];  // THIS HAS TO BE THE BEERS ACUTALLY TRIED, NOT JUST SUGGESTED!
+
+var totalHistoryArray = [] // this includes suggested beers that have not yet been tried IN ADDITION to those in triedHistoryArray
+
+var getRandomBeer = function(){
+  var randomBeerIndex = Math.floor(Math.random() * (seattleBeer.length));
+  totalHistoryArray.push(seattleBeer[randomBeerIndex])
+
+  //THE LINE BELOW IS JUST HERE FOR TESTING... IT SHOULD NOT BE IN THE PERMANENT CODE!!!!
+    triedHistoryArray.push(seattleBeer[randomBeerIndex]) // THE LINE ABOVE IS JUST FOR TESTING... IT SHOULD NOT BE IN THE PERMANENT CODE
+ // puts beer in history of beers that have been suggested or tried
+  console.log("first random beer:");
+  console.log(seattleBeer[randomBeerIndex])
+
+console.log("total history before suggestion:");
+console.log(totalHistoryArray);
+
+console.log("tried history array:")
+console.log(triedHistoryArray);
+};
+
+
+setTimeout(function() { getRandomBeer(); }, 15000);
+// getRandomBeer();  // needs to be linked to an event listener\
+
+
+setTimeout(function() { suggestSimilar(); }, 16000);
+
+
+// suggestSimilar();
+
+function suggestSimilar() {
+  // if no beers have been TRIED yet, you need to do that first!
+  if (!triedHistoryArray)  {
+    console.log("nothing tried yet!")
+    alert("you need to try something before we can make any suggestions based on what you've tried!");
+    return;
+  }
+
+  var randTriedBeerIndex = Math.floor(Math.random() * (triedHistoryArray.length));
+  var randomBeerTried = triedHistoryArray[randTriedBeerIndex];// gets random beer that has been tried already (not just suggested)
+
+  var randomBeerIndex2 = Math.floor(Math.random() * (seattleBeer.length));
+  var suggestedBeer  = seattleBeer[randomBeerIndex2] // get another random beer (from all beers in seattleBeer)
+
+  console.log("suggested beer:")
+  console.log(suggestedBeer.style.shortName);
+
+  console.log("Random beer tried:")
+  console.log(randomBeerTried.style.shortName);
+
+  for (var i = 0; i < totalHistoryArray.length; i++){
+    if (suggestedBeer === totalHistoryArray[i]){
+      return suggestSimilar() ; //if already been suggested/tried, then find another random beer
+    }
+  }
+
+  if (suggestedBeer.style.shortName){
+    console.log("in the first if statement");
+    if (suggestedBeer.style.shortName === randomBeerTried.style.shortName) {
+      console.log("the short names match");
+      totalHistoryArray.push(suggestedBeer); //put the new beer suggestion in tthe list of beers that have bene suggested so far
+    } else {
+        console.log("in the else statement");
+        return suggestSimilar();  //try again if both abv and style don't match!
+    }
+  }
+
+console.log("final total beer history array");
+console.log(totalHistoryArray);
+}
+
+// console.log("total history after suggestion:");
+// console.log(totalHistoryArray);
+
+
 
 // var getBeersByStyleGroup = function(style) {
 //   var styleArray = [];
