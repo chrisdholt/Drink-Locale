@@ -279,24 +279,52 @@ h3 {
   position: relative;
   display: block;
   max-width: 100%;
-  height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
-  padding-top: 1.5%;
-  padding-right: 3%;
-  padding-left: 3%;
-  padding-bottom: 1.5%;
+  padding-top: 0%;
+  padding-bottom: 0%;
   text-align: center;
+  height: 100%;
+  overflow: hidden;
+  padding-right: 0%;
+  padding-left: 0%;
 }
 
 .randBtn {
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
-  width: 25%;
+  width: 60%;
   font-size: 1.4em;
   background-color: white;
   border: none;
+}
+
+.randBtnOther {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  width: 30%;
+  font-size: 1.4em;
+  background-color: white;
+  border: none;
+}
+
+.randL {
+  width: 50%;
+  display: inline-block;
+  float: left;
+  clear: right;
+  position: relative;;
+}
+
+.randR {
+  width: 50%;
+  float: right;
+  display: inline-block;
+  position: relative;
+
 }
 
 /* ABOUT PAGE */
