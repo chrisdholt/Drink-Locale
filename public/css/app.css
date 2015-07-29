@@ -148,7 +148,6 @@ h3 {
 /* LOADING AJAX */
 
 .loading {
-  visibility: hidden;
   content: "";
   text-align: center;
   display: block;

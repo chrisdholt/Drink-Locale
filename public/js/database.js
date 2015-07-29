@@ -1,3 +1,7 @@
+$(document).ajaxStart(function () {
+    $("#loading").show();
+});
+
 $(document).ready(function() {
 
 //In Asynch, this will load the gif and allow it to run when ajax call is happening.
@@ -154,17 +158,17 @@ var misc = [
 $.ajax({
   url: db + collection + apiKey,
   type:'GET',
-  async: false,
+  async: true,
   contentType: contentType,
   dataType: dataType,
   success: console.log("Connected to MongoDB")
 }).done(function(response) {
   console.log("in the done statement");
   seattleBeer = response.data;
-})
-  .fail(function(error) {
-  console.log(error);
-});
+  $(document).ajaxStop(function () {
+  $("#loading").hide();
+  });
+
 
 var getBeersByStyleGroup = function(style) {
   var styleArray = [];
@@ -183,6 +187,33 @@ var getBeersByStyleGroup = function(style) {
 
 console.log(getBeersByStyleGroup(ipa));
 console.log(getBeersByStyleGroup(sour));
+
+
+
+
+
+})
+  .fail(function(error) {
+  console.log(error);
+});
+
+// var getBeersByStyleGroup = function(style) {
+//   var styleArray = [];
+//   for(var i=0; i < seattleBeer.length; i++) {
+//     for(var j=0; j < style.length; j++) {
+//       if(seattleBeer[i].style) {
+//         if(style[j] == seattleBeer[i].style.shortName) {
+//           styleArray.push(seattleBeer[i]);
+//         }
+//       }
+//     }
+//   }
+//   return styleArray;
+// };
+
+
+// console.log(getBeersByStyleGroup(ipa));
+// console.log(getBeersByStyleGroup(sour));
 
 
 
