@@ -299,7 +299,7 @@ h3 {
   border: none;
 }
 
-.randBtnOther {
+#misc {
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
