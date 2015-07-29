@@ -164,9 +164,9 @@ $(document).ready(function() {
         misc = response.data;
         break;
     }
-    $(document).ajaxStop(function () {
-      $("#loading").hide();
-    });
+    // $(document).ajaxStop(function () {
+    //   // $("#loading").hide();
+    // });
   })
   .fail(function(error) {
   console.log(error);
@@ -236,12 +236,17 @@ console.log(parsed);
 
 //Event Listener randomBeer.html buttons//
   $('.randBtn').on('click', function(e){
+    $(document).ajaxStart(function() {
+      $("#loading").show();
+    });
     requestBeersByStyle(e.target.id);
     setTimeout(function() {
       var beer = getRandomBeerByStyle(e.target.id);
       var beerId = beer.id;
+      $("#loading").hide().fadeOut("slow");
       window.open('beer.html' + '?id=' + beerId);
       // $(".pageTitle").html(beer.name);
+
       console.log(beer);
     }, 7000);
   });
