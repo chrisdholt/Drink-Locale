@@ -454,3 +454,4 @@ console.log(totalHistoryArray);
 //   }
 //   return styleArray;
 // };
+
