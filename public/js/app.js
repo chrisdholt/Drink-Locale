@@ -20,4 +20,3 @@ function checkAge() {
     window.open("http://www.disney.com","_self"); //opens disney.com if they say they are not 21
   });
 }
-
