@@ -34,3 +34,5 @@ CF Project Week
 - Connect to real backend.
 - Integrate “Share” buttons.
 - Other locations outside seattle (‘select location’ pulls correct beer info from API)
+
+We borrowed our bio code from http://codepen.io/shayhowe/pen/Fvjnf
