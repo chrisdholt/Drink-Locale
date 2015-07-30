@@ -1,10 +1,4 @@
-
-(function() {
-if (!localStorage['ageCheck']) {
-       localStorage['ageCheck'] = 'yes';
-       checkAge();
-   }
-})();
+'use strict';
 
 function checkAge() {
   var ageVer = document.getElementById('ageVerWrap');
@@ -17,6 +11,13 @@ function checkAge() {
 
   var no = document.getElementById('confirmNot');
   no.addEventListener('click', function(){
-    window.open("http://www.disney.com","_self"); //opens disney.com if they say they are not 21
+    window.open('http://www.disney.com', '_self'); //opens disney.com if they say they are not 21
   });
 }
+
+(function() {
+if (!localStorage.ageCheck) {
+       localStorage.ageCheck = 'yes';
+       checkAge();
+   }
+})();
