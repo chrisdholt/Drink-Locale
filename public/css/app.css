@@ -1,6 +1,7 @@
-/** {
-  border: 1px dashed;
-}*/
+body {
+  overflow: hidden;
+}
+
 h1 {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
@@ -28,6 +29,7 @@ h3 {
   position: absolute;
   height: 60px;
   width: 100%;
+  z-index: 999;
 }
 
 .pageTitle {
@@ -47,10 +49,35 @@ h3 {
   width: 60%;
 }
 
-#navLink {
+.navLink {
   display: inline-block;
   color: white;
   padding: 1% 2% 1% 2%;
+}
+
+.underline {
+  display: inline-block;
+  position: relative;
+  color: white;
+  text-decoration: none;
+}
+
+.underline:hover {
+  color: #A9C7CF;
+}
+
+.underline:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  background: transparent;
+  transition: width .3s ease, background-color .3s ease;
+}
+.underline:hover:after {
+  width: 100%;
+  background: #A9C7CF;
 }
 
 .contWrap {
@@ -88,7 +115,7 @@ h3 {
   padding-right: 4%;
   transform: translateY(-40%);
 /*  padding-top: 10%;
-  padding-bottom: 10%;*/
+  padding-bottom: 10%;
 }
 
 .randomBeer {
@@ -140,26 +167,8 @@ h3 {
   padding: 2%;
   margin: 0 auto;
   width: 100%;
-  position: fixed;
-  background-color: white;
-  bottom: 0;
-}
-
-/* LOADING AJAX */
-
-.loading {
-  display: none;
-  content: "";
-  text-align: center;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(/images/loading.gif);
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 1001;
+  background-color: white;
 }
 
 /* AGE VERIFICATION */
@@ -221,7 +230,7 @@ h3 {
   background-image: url(/images/beerBack.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 0 auto;
+  margin: 0 auto;;
 }
 
 .beerWrap {
@@ -358,3 +367,42 @@ h3 {
   padding-bottom: 1.5%;
 }
 
+#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#fff;
+    z-index:99;
+}
+
+#status {
+    width:200px;
+    height:200px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    background-image:url(../img/status.gif);
+    background-repeat:no-repeat;
+    background-position:center;
+    margin:-100px 0 0 -100px;
+}
+
+/* LOADING AJAX */
+
+.loading {
+  display: none;
+  content: "";
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/images/loading.gif);
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+}

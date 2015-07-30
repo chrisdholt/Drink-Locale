@@ -1,7 +1,5 @@
 $(document).ready(function() {
-
-
-
+  $("#loading").hide();
   //Parse the URL to get the user's input
   var getUserInput = function(inputName) {
     var urlSearch = window.location.search;

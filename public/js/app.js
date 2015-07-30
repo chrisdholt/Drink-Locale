@@ -1,4 +1,5 @@
-  (function() {
+
+(function() {
 if (!localStorage['ageCheck']) {
        localStorage['ageCheck'] = 'yes';
        checkAge();
