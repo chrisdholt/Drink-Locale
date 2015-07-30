@@ -12,6 +12,7 @@ $(document).ready(function() {
     var beerLink;
     var beerABV;
     var beerIBU;
+    $(".histTable").append('<thead><tr class="histTH"><th><h3>Beer Name</h3></th><th><h3>Brewery</h3></th><th><h3>Beer Style</h3></th><th class="abvTH"><h3>ABV</h3></th><th class="ibuTH"><h3>IBU</h3></th></tr></thead>');
     history.forEach(function(beer) {
       beerStyle = getBeerStyle(beer);
       beerABV = beer.abv;
@@ -24,7 +25,7 @@ $(document).ready(function() {
       }
       beerLink = '<a href="./beer.html?id=' + beer.id + '&style=' + beerStyle + '">' + beer.name + "</a>";
       console.log(beerLink);
-      listing = "<tr><td>" + beerLink + "</td>" + "<td>" + beer.breweries[0].name + "</td>" + "<td>" + beer.style.shortName + "</td>" + "<td>" + beerABV + "</td>" + "<td>" + beerIBU + "</td>" + "</tr>";
+      listing = '<tr><td class="name">' + beerLink + "</td>" + "<td>" + beer.breweries[0].name + "</td>" + "<td>" + beer.style.shortName + "</td>" + "<td>" + beerABV + "</td>" + "<td>" + beerIBU + "</td>" + "</tr>";
       console.log(listing);
       $(".historyList").append(listing);
     });
