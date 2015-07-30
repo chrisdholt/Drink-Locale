@@ -20,8 +20,12 @@ $(document).ready(function() {
 
   //Gets a beer from the local storage
   var getBeerFromLocal = function(id) {
-    var workingArray = JSON.parse(localStorage["beerHistory"]);
-    //console.log(workingArray);
+    var workingArray;
+    if(localStorage.beerHistory) {
+      workingArray = JSON.parse(localStorage.beerHistory);
+    } else {
+      return false;
+    }
     for(var i = workingArray.length-1; i >= 0; i--) {
       if(workingArray[i].id == id) {
         return workingArray[i];
