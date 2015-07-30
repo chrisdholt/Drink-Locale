@@ -1,4 +1,4 @@
-/*body {
+body {
   overflow: hidden;
 }
 
@@ -115,7 +115,7 @@ h3 {
   padding-right: 4%;
   transform: translateY(-40%);
 /*  padding-top: 10%;
-  padding-bottom: 10%;*/
+  padding-bottom: 10%;
 }
 
 .randomBeer {
