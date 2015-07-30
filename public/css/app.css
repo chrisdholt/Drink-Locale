@@ -171,7 +171,7 @@ h3 {
   background-color: white;
 }
 
- AGE VERIFICATION
+ /*AGE VERIFICATION*/
 
 .hide {
   visibility: hidden;
@@ -383,7 +383,7 @@ h3 {
     position:absolute;
     left:50%;
     top:50%;
-    background-image:url(../img/status.gif);
+/*    background-image:url(../img/status.gif);*/
     background-repeat:no-repeat;
     background-position:center;
     margin:-100px 0 0 -100px;
