@@ -342,6 +342,7 @@ var getRandomBeerByStyle = function(style){
         break;
     }
     $(".browseTable").empty();
+    $(".browseTable").append('<thead><tr class="browseTH"><th><h3>Beer Name</h3></th><th><h3>Brewery</h3></th><th><h3>Beer Style</h3></th><th class="abvTH"><h3>ABV</h3></th><th class="ibuTH"><h3>IBU</h3></th></tr></thead>');
     bucket.forEach(function(beer) {
       beerABV = beer.abv;
       beerIBU = beer.ibu;
