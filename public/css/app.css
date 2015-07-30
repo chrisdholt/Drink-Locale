@@ -219,16 +219,41 @@ p {
   padding-top: 2%;
 }
 
-.historyList {
-  color: white;
+.histTH {
+  text-align: left;
 }
 
-.historyList li a {
+.abvTH {
+  padding-right: 3%;
+
+}
+
+.histTH th {
+  padding-top: 1%;
+  border: none !important;
+}
+
+.historyList tbody tr {
+  border-bottom: 1px solid gold;
+  font-family: 'Raleway', sans-serif;;
+}
+
+.historyList tbody tr td {
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.historyList {
+  color: white;
+  width: 100%;
+}
+
+.historyList tbody tr a {
   text-decoration: none;
   color: white;
 }
 
-.historyList li a:hover {
+.historyList tbody tr a:hover {
   color: gold;
 }
 
@@ -450,6 +475,15 @@ p {
   padding-bottom: 1.5%;
 }
 
+.aboutTable {
+  max-width: 100%;
+
+}
+
+
+
+
+/* PRELOADER */
 #preloader {
     position:fixed;
     top:0;
@@ -479,8 +513,8 @@ p {
   perspective: 600;
   position: relative;
   width: 150px;
-  margin: 12px 0;
-  height: 150px;
+  margin: 5%;
+  height: 150px;;;
 }
 
 .card {
@@ -512,6 +546,13 @@ p {
 .about-image{
   height: 100%;
    width: 100%;
+}
+
+.bio {
+    padding-left: 5%;
+    padding-right: 5%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1em;
 }
 
 /* LOADING AJAX */
