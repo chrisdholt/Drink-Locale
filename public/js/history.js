@@ -10,11 +10,21 @@ $(document).ready(function() {
   var renderHistory = function() {
     var listing;
     var beerLink;
+    var beerABV;
+    var beerIBU;
     history.forEach(function(beer) {
       beerStyle = getBeerStyle(beer);
+      beerABV = beer.abv;
+      beerIBU = beer.ibu;
+      if(!beerABV) {
+        beerABV = "???";
+      }
+      if(!beerIBU) {
+        beerIBU = "???";
+      }
       beerLink = '<a href="./beer.html?id=' + beer.id + '&style=' + beerStyle + '">' + beer.name + "</a>";
       console.log(beerLink);
-      listing = "<li>" + beerLink + "</li>";
+      listing = "<tr><td>" + beerLink + "</td>" + "<td>" + beer.breweries[0].name + "</td>" + "<td>" + beer.style.shortName + "</td>" + "<td>" + beerABV + "</td>" + "<td>" + beerIBU + "</td>" + "</tr>";
       console.log(listing);
       $(".historyList").append(listing);
     });
