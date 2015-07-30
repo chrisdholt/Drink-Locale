@@ -89,6 +89,11 @@ p {
   background: #A9C7CF;
 }
 
+#icons {
+  color: white;
+  text-decoration: none;
+}
+
 .contWrap {
   position: relative;
   display: block;
@@ -178,6 +183,7 @@ p {
   width: 100%;
   position: absolute;
   background-color: white;
+  bottom: 0;
 }
 
  /*AGE VERIFICATION*/
@@ -436,19 +442,22 @@ p {
 }
 
 .inner-404 {
-  position: relative;
-  display: block;
-  margin: 6%;
-  padding-top: 4%;
-  padding-bottom: 4%;
+  position: fixed;
+  background-color: rgba(0,0,0,0.4);
+  padding-bottom: 2%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .H1-404 {
-  font-size: 8em;
-  color: white;
+  font-size: 14em;
+  color: white;;;
 }
 
 .H2-404 {
-  font-size: 2.2em;
+  font-size: 3em;
   color: white;
 }
