@@ -247,8 +247,38 @@ var getRandomBeerByStyle = function(style){
       // $("#loading").hide();
       window.open('beer.html' + '?id=' + beerId + '&style=' + e.target.id, '_self');
       // $(".pageTitle").html(beer.name);
+    }, 7000);
+  });
 
-      console.log(beer);
+
+    var getUserInput = function(input) {
+    var urlSearch = window.location.search;
+    var split1 = urlSearch.split("id=");
+    split1 = split1[1];
+    var split2 = split1.split('&');
+    if (input === "id"){
+      return split2[0];
+    }
+
+    split2 = split2[1];
+    var split3 = split2.split("=");
+
+    if (input === "style"){
+      return split3[1]
+    }
+  };
+      //Event Listener for Beer.html show me something similar button//
+  $('#similarBtn').on('click', function(e){
+    $(document).ajaxStart(function() {
+      $("#loading").fadeIn(1000);
+    });
+    var beerStyle = getUserInput("style");
+    requestBeersByStyle(beerStyle);
+    setTimeout(function() {
+      var beer = getRandomBeerByStyle(beerStyle);
+      var beerId = beer.id;
+
+      window.open('beer.html' + '?id=' + beerId + '&style=' + beerStyle, '_self');
     }, 7000);
   });
 
