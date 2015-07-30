@@ -24,7 +24,7 @@ p {
 
 .main-index {
   width: 100%;
-  background-image: url(/images/beerTaps.jpg);
+  background-image: url(/images/HomePic.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0 auto;
@@ -48,6 +48,10 @@ p {
   text-transform: uppercase;
 }
 
+.pageTitle:hover {
+  color: gold;
+}
+
 .nav {
   position: relative;
   float: right;
@@ -68,11 +72,11 @@ p {
   color: white;
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .underline:hover {
-  color: #A9C7CF;
+  color: gold;
 }
 
 .underline:after {
@@ -86,7 +90,7 @@ p {
 }
 .underline:hover:after {
   width: 100%;
-  background: #A9C7CF;
+  background: gold;
 }
 
 #icons {
@@ -231,7 +235,7 @@ p {
 
 .main-history {
   width: 100%;
-  background-image: url(/images/history.jpg);
+  background-image: url(/images/beerPour.jpg);
   background-repeat: no-repeat;
   margin: 0 auto;
   background-size: cover;
@@ -487,7 +491,7 @@ p {
 /* ABOUT PAGE */
 .main-about {
   width: 100%;
-  background-image: url(/images/beerWall.jpg);
+  background-image: url(/images/about.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0 auto;
@@ -619,7 +623,7 @@ p {
 
 .main-404 {
   width: 100%;
-  background-image: url(/images/empty.png);
+  background-image: url(/images/empty.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0 auto;
@@ -651,7 +655,7 @@ p {
 
 .main-browse {
   width: 100%;
-  background-image: url(/images/taps.jpg);
+  background-image: url(/images/randomBeer.jpg);
   background-repeat: no-repeat;
   margin: 0 auto;
   background-size: cover;
