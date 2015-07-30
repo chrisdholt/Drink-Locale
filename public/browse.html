@@ -8,7 +8,7 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   </head>
-  <body class="main-history">
+  <body class="main-randomBeer">
     <div id="preloader">
       <div id="status">&nbsp;</div>
     </div>
@@ -23,7 +23,7 @@
       </section>
     </section>
     <header class="headWrap">
-        <h2 class="pageTitle">Drink Locale</h2>
+        <a href="index.html"><h2 class="pageTitle">Drink Locale</h2></a>
       <section class="nav">
         <ul>
           <li class="navLink"><a class="underline" href="about.html">About Us</a></li>
@@ -32,16 +32,32 @@
         </ul>
       </section>
     </header>
-    <section class="historyWrap">
-      <section class="historyContent">
-        <table class="historyList"></table>
+    <section class="randWrap">
+      <section class="randContent">
+        <h1 class="pickStyle">PICK A STYLE</h1>
+        <section class="randL">
+          <h3><button id="ipa" class="randBtn">India Pale Ale</button></h3>
+          <h3><button id="strongAle" class="randBtn">Strong Ale</button></h3>
+          <h3><button id="stoutPorter" class="randBtn">Stout/Porter</button></h3>
+          <h3><button id="scotch" class="randBtn">Scotch Ale</button></h3>
+          <h3><button id="pale" class="randBtn">Pale Ale</button></h3>
+        </section>
+        <section class="randR">
+          <h3><button id="lagerPilsner" class="randBtn">Lager/Pilsner</button></h3>
+          <h3><button id="wheat" class="randBtn">Wheat Ale</button></h3>
+          <h3><button id="belgian" class="randBtn">Belgian</button></h3>
+          <h3><button id="sour" class="randBtn">Sour</button></h3>
+          <h3><button id="bock" class="randBtn">Bock</button></h3>
+        </section>
+        <h3><button id="misc" class="randBtn">I Want Something Else</button></h3>
       </section>
     </section>
     <footer class="footer">
       <h2>This is footer Text. It's a placeholder</h2>
     </footer>
     <script src="js/app.js"></script>
-    <script src="js/history.js"></script>
+    <script src="js/database.js"></script>
+    <!-- Preloader -->
     <script type="text/javascript" src="js/listeners.js"></script>
   </body>
 </html>

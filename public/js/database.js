@@ -282,6 +282,13 @@ var getRandomBeerByStyle = function(style){
     }, 7000);
   });
 
+  var renderBrowseStyle = function(bucket) {
+    var link;
+    bucket.forEach(function(beer) {
+
+    });
+  }
+
   // function suggestSimilar(style) {
   //   // if no beers have been TRIED yet, you need to do that first!
   //   if (!triedHistoryArray)  {
