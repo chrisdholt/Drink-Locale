@@ -636,14 +636,20 @@ p {
   max-width: 100%;
   padding-left: 3%;
   padding-right: 3%;
-  height: 410px;
-  overflow: scroll;;
 }
 
-.browseTable {
+.browseSelector {
+}
+
+.browse {
+  color: white;
+  max-width: 100%;
+  padding-left: 3%;
+  padding-right: 3%;
+  height: 410px;
+  overflow: scroll;
   width: 100%;
     /* padding-right: 3%; */;
-
 }
 
 .browseTH {
