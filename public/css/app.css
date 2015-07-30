@@ -178,12 +178,13 @@ p {
 
 .footer {
   text-align: center;
-  padding: 2%;
   margin: 0 auto;
   width: 100%;
   position: relative;
   background-color: white;
   bottom: 0;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 
 /*HISTORY */
@@ -200,35 +201,59 @@ p {
   position: relative;
   display: block;
   max-width: 100%;
-  padding-left: 8%;
-  padding-right: 8%;
   padding-top: 10%;
   padding-bottom: 10%;
+  padding-right: 8%;
+  padding-left: 8%;
 }
 
 .historyContent {
   position: relative;
   display: block;
-  max-width: 100%;
-  height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
-  padding-right: 3%;
+  max-width: 100%;
   padding-left: 3%;
-  padding-bottom: 6%;
-  padding-top: 2%;
+  padding-right: 3%;
+  height: 400px;
+  overflow: scroll;;
+}
+
+.histTable {
+  width: 100%;
+    /* padding-right: 3%; */;
+
+}
+
+.histTH {
+  padding-top: 1%;
+  border-bottom: 1px solid gold;
+  text-align: left;
+}
+
+.abvTH {
+  padding-right: 3%;
+
 }
 
 .historyList {
+  font-family: 'Raleway', sans-serif;
   color: white;
+  width: 100%;
 }
 
-.historyList li a {
+.historyList tr td {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-bottom: 1px solid gold;
+}
+
+.historyList a {
   text-decoration: none;
   color: white;
 }
 
-.historyList li a:hover {
+.historyList a:hover {
   color: gold;
 }
 
@@ -344,6 +369,8 @@ p {
 .pickStyle {
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
+  width: 60%;
+  float: left;
 }
 
 .main-randomBeer {
@@ -450,6 +477,15 @@ p {
   padding-bottom: 1.5%;
 }
 
+.aboutTable {
+  max-width: 100%;
+
+}
+
+
+
+
+/* PRELOADER */
 #preloader {
     position:fixed;
     top:0;
@@ -479,8 +515,8 @@ p {
   perspective: 600;
   position: relative;
   width: 150px;
-  margin: 12px 0;
-  height: 150px;
+  margin: 5%;
+  height: 150px;;;
 }
 
 .card {
@@ -512,6 +548,13 @@ p {
 .about-image{
   height: 100%;
    width: 100%;
+}
+
+.bio {
+    padding-left: 5%;
+    padding-right: 5%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1em;
 }
 
 /* LOADING AJAX */
@@ -562,4 +605,88 @@ p {
 .H2-404 {
   font-size: 3em;
   color: white;
+}
+
+
+/* BROWSE */
+
+.main-browse {
+  width: 100%;
+  background-image: url(/images/taps.jpg);
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  background-size: cover;
+}
+
+.browseWrap {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  padding-right: 8%;
+  padding-left: 8%;
+}
+
+.browseContent {
+  position: relative;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  max-width: 100%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.browseSelector {
+}
+
+.browse {
+  color: white;
+  max-width: 100%;
+  padding-left: 3%;
+  padding-right: 3%;
+  height: 410px;
+  overflow: scroll;
+  width: 100%;
+    /* padding-right: 3%; */;
+}
+
+.browseTH {
+  padding-top: 1%;
+  border-bottom: 1px solid gold;
+  text-align: left;
+}
+
+.abvTH {
+  padding-right: 3%;
+
+}
+
+.browseList {
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  width: 100%;
+}
+
+.browseList tr td {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-bottom: 1px solid gold;
+}
+
+.browseList a {
+  text-decoration: none;
+  color: white;
+}
+
+.browseList a:hover {
+  color: gold;
+}
+
+.browseSelector {
+  float: right;
+  padding-right: 2%;
+  padding-top: 3%;
+
 }
