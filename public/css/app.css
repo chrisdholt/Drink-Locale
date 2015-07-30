@@ -28,6 +28,7 @@ h3 {
   position: absolute;
   height: 60px;
   width: 100%;
+  z-index: 999;
 }
 
 .pageTitle {
@@ -47,10 +48,35 @@ h3 {
   width: 60%;
 }
 
-#navLink {
+.navLink {
   display: inline-block;
   color: white;
   padding: 1% 2% 1% 2%;
+}
+
+.underline {
+  display: inline-block;
+  position: relative;
+  color: white;
+  text-decoration: none;
+}
+
+.underline:hover {
+  color: #A9C7CF;
+}
+
+.underline:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  background: transparent;
+  transition: width .3s ease, background-color .3s ease;
+}
+.underline:hover:after {
+  width: 100%;
+  background: #A9C7CF;
 }
 
 .contWrap {
@@ -140,9 +166,8 @@ h3 {
   padding: 2%;
   margin: 0 auto;
   width: 100%;
-  position: fixed;
+  position: absolute;
   background-color: white;
-  bottom: 0;
 }
 
 /* LOADING AJAX */
@@ -159,7 +184,7 @@ h3 {
   background-image: url(/images/loading.gif);
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: 1001;
+  z-index: 1000;
 }
 
 /* AGE VERIFICATION */
@@ -221,7 +246,7 @@ h3 {
   background-image: url(/images/beerBack.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 0 auto;
+  margin: 0 auto;;
 }
 
 .beerWrap {

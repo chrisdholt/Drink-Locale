@@ -244,8 +244,8 @@ var getRandomBeerByStyle = function(style){
     setTimeout(function() {
       var beer = getRandomBeerByStyle(e.target.id);
       var beerId = beer.id;
-      $("#loading").hide().fadeOut("slow");
-      window.open('beer.html' + '?id=' + beerId);
+      $("#loading").fadeOut(5000).hide();
+      window.open('beer.html' + '?id=' + beerId, '_self');
       // $(".pageTitle").html(beer.name);
 
       console.log(beer);
