@@ -245,46 +245,46 @@ var getRandomBeerByStyle = function(style){
       var beer = getRandomBeerByStyle(e.target.id);
       var beerId = beer.id;
       // $("#loading").hide();
-      window.open('beer.html' + '?id=' + beerId, '_self');
+      window.open('beer.html' + '?id=' + beerId + '&style=' + e.target.id, '_self');
       // $(".pageTitle").html(beer.name);
 
       console.log(beer);
     }, 7000);
   });
 
-  function suggestSimilar(style) {
-    // if no beers have been TRIED yet, you need to do that first!
-    if (!triedHistoryArray)  {
-      console.log("nothing tried yet!");
-      alert("you need to try something before we can make any suggestions based on what you've tried!");
-      return;
-    }
+  // function suggestSimilar(style) {
+  //   // if no beers have been TRIED yet, you need to do that first!
+  //   if (!triedHistoryArray)  {
+  //     console.log("nothing tried yet!");
+  //     alert("you need to try something before we can make any suggestions based on what you've tried!");
+  //     return;
+  //   }
 
-    var randTriedBeerIndex = Math.floor(Math.random() * (triedHistoryArray.length));
-    var randomBeerTried = triedHistoryArray[randTriedBeerIndex];// gets random beer that has been tried already (not just suggested)
+  //   var randTriedBeerIndex = Math.floor(Math.random() * (triedHistoryArray.length));
+  //   var randomBeerTried = triedHistoryArray[randTriedBeerIndex];// gets random beer that has been tried already (not just suggested)
 
-    var randomBeerIndex2 = Math.floor(Math.random() * (style.length));
-    var suggestedBeer  = style[randomBeerIndex2] // get another random beer (from all beers in seattleBeer)
+    // var randomBeerIndex2 = Math.floor(Math.random() * (style.length));
+    // var suggestedBeer  = style[randomBeerIndex2] // get another random beer (from all beers in seattleBeer)
 
-  console.log("suggested beer:")
-  console.log(suggestedBeer);
+//   console.log("suggested beer:")
+//   console.log(suggestedBeer);
 
-  console.log("Random beer tried:")
-  console.log(randomBeerTried);
+//   console.log("Random beer tried:")
+//   console.log(randomBeerTried);
 
-  for (var i = 0; i < totalHistoryArray.length; i++){
-    if (suggestedBeer === totalHistoryArray[i]){
-      return suggestSimilar(style) ; //if already been suggested/tried, then find another random beer
-    }
-  }
-  totalHistoryArray.push(suggestedBeer);
+//   for (var i = 0; i < totalHistoryArray.length; i++){
+//     if (suggestedBeer === totalHistoryArray[i]){
+//       return suggestSimilar(style) ; //if already been suggested/tried, then find another random beer
+//     }
+//   }
+//   totalHistoryArray.push(suggestedBeer);
 
 
 
-console.log("final total beer history array");
-console.log(totalHistoryArray);
+// console.log("final total beer history array");
+// console.log(totalHistoryArray);
 
-  }
+  // }
 
 });
 

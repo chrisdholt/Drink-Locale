@@ -1,10 +1,21 @@
 $(document).ready(function() {
   $("#loading").hide();
   //Parse the URL to get the user's input
-  var getUserInput = function(inputName) {
+  var getUserInput = function(input) {
     var urlSearch = window.location.search;
-    var inputArray = urlSearch.split(inputName + "=");
-    return inputArray[1];
+    var split1 = urlSearch.split("id=");
+    split1 = split1[1];
+    var split2 = split1.split('&');
+    if (input === "id"){
+      return split2[0];
+    }
+
+    split2 = split2[1];
+    var split3 = split2.split("=");
+
+    if (input === "style"){
+      return split3[1]
+    }
   };
 
   var getBeerFromLocal = function(id) {
@@ -43,6 +54,9 @@ $(document).ready(function() {
   };
 
   var beerId = getUserInput("id");
+  var beerStyle = getUserInput("style");
+  console.log(beerId);
+  console.log(beerStyle);
   var beer = getBeerFromLocal(beerId);
   renderBeer();
 
