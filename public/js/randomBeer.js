@@ -76,6 +76,7 @@ $(document).ready(function() {
   } else {
     beer = getBeerFromSession(beerId);
   }
+  console.dir(beer);
   renderBeer();
 
 });
