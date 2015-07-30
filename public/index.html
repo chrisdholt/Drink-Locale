@@ -10,7 +10,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   </head>
   <body class="main-index">
-    <section id="loading" class="loading"></section>
+    <div id="preloader">
+      <div id="status">&nbsp;</div>
+    </div>
+    <section id="ajaxLoad">
+      <div id="loading" class="loading"></div>
+    </section>
     <section id='ageVerWrap' class="hide">
       <section id='ageVer'>
         <h1 class="ofAge">I Am Of Legal Drinking Age</h1>
@@ -58,5 +63,14 @@
     </footer>
     <script src="js/app.js"></script>
     <script src="js/database.js"></script>
+    <script type="text/javascript">
+  //<![CDATA[
+    $(window).load(function() { // makes sure the whole site is loaded
+      $('#status').fadeOut(); // will first fade out the loading animation
+      $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+      $('body').delay(350).css({'overflow':'visible'});
+    })
+  //]]>
+  </script>
   </body>
 </html>

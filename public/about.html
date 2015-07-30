@@ -8,6 +8,12 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800' rel='stylesheet' type='text/css'>
   </head>
   <body class="main-about">
+    <div id="preloader">
+      <div id="status">&nbsp;</div>
+    </div>
+    <section id="ajaxLoad">
+      <div id="loading" class="loading"></div>
+    </section>
     <section id='ageVerWrap' class="hide">
       <section id='ageVer'>
         <h1 class="ofAge">I Am Of Legal Drinking Age</h1>
@@ -45,5 +51,14 @@
       <h2>This is footer Text. It's a placeholder</h2>
     </footer>
     <script src="js/app.js"></script>
+    <script type="text/javascript">
+  //<![CDATA[
+    $(window).load(function() { // makes sure the whole site is loaded
+      $('#status').fadeOut(); // will first fade out the loading animation
+      $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+      $('body').delay(350).css({'overflow':'visible'});
+    })
+  //]]>
+  </script>
   </body>
 </html>

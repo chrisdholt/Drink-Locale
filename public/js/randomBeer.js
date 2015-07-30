@@ -1,5 +1,6 @@
 $(document).ready(function() {
-
+  //Hide Ajax loader if present
+  $("#loading").hide();
   //Parse the URL to get the user's input
   var getUserInput = function(inputName) {
     var urlSearch = window.location.search;
