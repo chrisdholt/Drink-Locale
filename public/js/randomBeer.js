@@ -18,10 +18,23 @@ $(document).ready(function() {
     }
   };
 
+  //Gets a beer from the local storage
   var getBeerFromLocal = function(id) {
     var workingArray = JSON.parse(localStorage["beerHistory"]);
-    console.log(workingArray);
+    //console.log(workingArray);
     for(var i = workingArray.length-1; i >= 0; i--) {
+      if(workingArray[i].id == id) {
+        return workingArray[i];
+      }
+    }
+    return false;
+  };
+
+  //Gets a beer from the session storage
+  var getBeerFromSession = function(id) {
+    var workingArray = JSON.parse(sessionStorage["bucket"]);
+    console.log(workingArray);
+    for(var i = 0; i < workingArray.length; i++) {
       if(workingArray[i].id == id) {
         return workingArray[i];
       }
@@ -55,9 +68,14 @@ $(document).ready(function() {
 
   var beerId = getUserInput("id");
   var beerStyle = getUserInput("style");
+  var beer;
   console.log(beerId);
   console.log(beerStyle);
-  var beer = getBeerFromLocal(beerId);
+  if(getBeerFromLocal(beerId)) {
+    beer = getBeerFromLocal(beerId);
+  } else {
+    beer = getBeerFromSession(beerId);
+  }
   renderBeer();
 
 });
