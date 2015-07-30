@@ -301,36 +301,47 @@ var getRandomBeerByStyle = function(style){
     switch(style) {
       case "ipa":
         bucket = ipa;
+        sessionStorage.bucket = JSON.stringify(ipa);
         break;
       case "strongAle":
         bucket = strongAle;
+        sessionStorage.bucket = JSON.stringify(strongAle);
         break;
       case "stoutPorter":
         bucket = stoutPorter;
+        sessionStorage.bucket = JSON.stringify(stoutPorter);
         break;
       case "lagerPilsner":
         bucket = lagerPilsner;
+        sessionStorage.bucket = JSON.stringify(lagerPilsner);
         break;
       case "scotch":
         bucket = scotch;
+        sessionStorage.bucket = JSON.stringify(scotch);
         break;
       case "pale":
         bucket = pale;
+        sessionStorage.bucket = JSON.stringify(pale);
         break;
       case "wheat":
         bucket = wheat;
+        sessionStorage.bucket = JSON.stringify(wheat);
         break;
       case "belgian":
         bucket = belgian;
+        sessionStorage.bucket = JSON.stringify(belgian);
         break;
       case "sour":
         bucket = sour;
+        sessionStorage.bucket = JSON.stringify(sour);
         break;
       case "bock":
         bucket = bock;
+        sessionStorage.bucket = JSON.stringify(bock);
         break;
       case "misc":
         bucket = misc;
+        sessionStorage.bucket = JSON.stringify(misc);
         break;
     }
     bucket.forEach(function(beer) {
