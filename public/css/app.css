@@ -253,22 +253,15 @@ p {
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
   max-width: 100%;
-  padding-left: 3%;
   padding-right: 3%;
+  padding-left: 3%;
 }
 
 .histTable {
-/*  color: white;
-  max-width: 100%;
-  padding-left: 3%;
-  padding-right: 3%;
-  height: 410px;
-  overflow: scroll;
-  width: 100%;*/
+  width: 100%;
 }
 
 .histTH {
-  padding-top: 1%;
   border-bottom: 1px solid gold;
   text-align: left;
 }
@@ -279,12 +272,6 @@ p {
 
 .historyList {
   font-family: 'Raleway', sans-serif;
-  max-width: 100%;
-  padding-left: 3%;
-  padding-right: 3%;
-  height: 410px;
-  overflow: scroll;
-  width: 100%;
 }
 
 .historyList tr td {
@@ -696,11 +683,9 @@ p {
 .browse {
   color: white;
   max-width: 100%;
-  padding-left: 3%;
-  padding-right: 3%;
-  height: 410px;
-  overflow: scroll;
   width: 100%;
+  overflow: scroll;
+  height: 410px;;;
 }
 
 .browseTH {
@@ -747,3 +732,5 @@ p {
   width: 70%;
   float: left;
 }
+
+
