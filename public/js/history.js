@@ -23,7 +23,7 @@ $(document).ready(function() {
       if(!beerIBU) {
         beerIBU = "???";
       }
-      beerLink = '<a href="./beer.html?id=' + beer.id + '&style=' + beerStyle + '">' + beer.name + "</a>";
+      beerLink = '<a href="./beer.html?id=' + beer.id + '&style=' + beerStyle + '">' + beer.nameDisplay + "</a>";
       console.log(beerLink);
       listing = '<tr><td class="name">' + beerLink + "</td>" + "<td>" + beer.breweries[0].name + "</td>" + "<td>" + beer.style.shortName + "</td>" + "<td>" + beerABV + "</td>" + "<td>" + beerIBU + "</td>" + "</tr>";
       console.log(listing);
