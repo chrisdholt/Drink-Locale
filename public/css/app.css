@@ -367,29 +367,28 @@ h3 {
   padding-bottom: 1.5%;
 }
 
-/* Page Preloader */
-
 #preloader {
     position:fixed;
     top:0;
     left:0;
     right:0;
     bottom:0;
-    background-color:#fff; /* change if the mask should have another color then white */
-    z-index:99; /* makes sure it stays on top */
+    background-color:#fff;
+    z-index:99;
 }
 
 #status {
     width:200px;
     height:200px;
     position:absolute;
-    left:50%; /* centers the loading animation horizontally one the screen */
-    top:50%; /* centers the loading animation vertically one the screen */
-/*    background-image:url(images/balls.gif); *//* path to your loading animation */
+    left:50%;
+    top:50%;
+    background-image:url(../img/status.gif);
     background-repeat:no-repeat;
     background-position:center;
-    margin:-100px 0 0 -100px; /* is width and height divided by two */
+    margin:-100px 0 0 -100px;
 }
+
 /* LOADING AJAX */
 
 .loading {
@@ -406,14 +405,4 @@ h3 {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1000;
-}
-
-#ajaxLoad {
-    position:fixed;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    background-color:#fff; /* change if the mask should have another color then white */
-    z-index:98; /* makes sure it stays on top */
 }
