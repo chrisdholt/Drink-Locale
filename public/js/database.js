@@ -180,6 +180,7 @@ var beerHistory = [];
 // var totalHistoryArray = [] // this includes suggested beers that have not yet been tried IN ADDITION to those in triedHistoryArray
 
 // requestBeersByStyle("ipa");
+var loopCounter = 0;
 var getRandomBeerByStyle = function(style){
 
 // requestBeersByStyle(style);
@@ -229,9 +230,23 @@ var getRandomBeerByStyle = function(style){
     localStorage["beerHistory"] = JSON.stringify([]);
     beerHistory = localStorage["beerHistory"];
   }
-  beerHistory = JSON.parse(localStorage["beerHistory"]);
+  beerHistory = JSON.parse(localStorage.beerHistory);
+
+  //Loop to prevent duplicates
+  for (var i = 0; i < beerHistory.length; i++) {
+    if(beerHistory[i].nameDisplay == workingArray[randomBeerIndex].nameDisplay) {
+      console.log('The beers were the same!');
+      loopCounter++;
+      if(loopCounter >= 100) {
+        alert("You've explored all the beers from this style! It will appear in your history twice. Please pick a different style.");
+        break;
+      }
+      return getRandomBeerByStyle(style);
+    }
+  };
   beerHistory.push(workingArray[randomBeerIndex]);
-  localStorage["beerHistory"] = JSON.stringify(beerHistory);
+  localStorage.beerHistory = JSON.stringify(beerHistory);
+
   return workingArray[randomBeerIndex];
 };
 
@@ -343,6 +358,7 @@ var getRandomBeerByStyle = function(style){
     }
     $(".browseTable").empty();
     $(".browseTable").append('<thead><tr class="browseTH"><th><h3>Beer Name</h3></th><th><h3>Brewery</h3></th><th><h3>Beer Style</h3></th><th class="abvTH"><h3>ABV</h3></th><th class="ibuTH"><h3>IBU</h3></th></tr></thead>');
+    console.dir(bucket);
     bucket.forEach(function(beer) {
       beerABV = beer.abv;
       beerIBU = beer.ibu;
@@ -352,7 +368,7 @@ var getRandomBeerByStyle = function(style){
       if(!beerIBU) {
         beerIBU = "???";
       }
-      beerLink = '<a href="./beer.html?id=' + beer.id + '&style=' + style + '">' + beer.nameDisplay + "</a>";
+      beerLink = '<a href="./beer.html?id=' + beer.id + '&style=' + style + '">' + beer.name + "</a>";
       console.log(beerLink);
       listing = '<tr><td class="name">' + beerLink + "</td>" + "<td>" + beer.breweries[0].name + "</td>" + "<td>" + beer.style.shortName + "</td>" + "<td>" + beerABV + "</td>" + "<td>" + beerIBU + "</td>" + "</tr>";
       console.log(listing);
