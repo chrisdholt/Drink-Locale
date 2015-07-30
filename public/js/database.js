@@ -285,9 +285,6 @@ var getRandomBeerByStyle = function(style){
 
   //Listener for the browse selector
   $('.browseTarget').on('change', function(e){
-    // $(document).ajaxStart(function() {
-    //   $("#loading").fadeIn(1000);
-    // });
     requestBeersByStyle(e.target.value);
     setTimeout(function() {
       renderBrowseStyle(e.target.value);
@@ -344,6 +341,7 @@ var getRandomBeerByStyle = function(style){
         sessionStorage.bucket = JSON.stringify(misc);
         break;
     }
+    $(".browseTable").empty();
     bucket.forEach(function(beer) {
       beerABV = beer.abv;
       beerIBU = beer.ibu;
@@ -353,9 +351,9 @@ var getRandomBeerByStyle = function(style){
       if(!beerIBU) {
         beerIBU = "???";
       }
-      beerLink = '<a href="./beer.html?id=' + beer.id + '&style=' + style + '">' + beer.name + "</a>";
+      beerLink = '<a href="./beer.html?id=' + beer.id + '&style=' + style + '">' + beer.nameDisplay + "</a>";
       console.log(beerLink);
-      listing = "<tr><td>" + beerLink + "</td>" + "<td>" + beer.breweries[0].name + "</td>" + "<td>" + beer.style.shortName + "</td>" + "<td>" + beerABV + "</td>" + "<td>" + beerIBU + "</td>" + "</tr>";
+      listing = '<tr><td class="name">' + beerLink + "</td>" + "<td>" + beer.breweries[0].name + "</td>" + "<td>" + beer.style.shortName + "</td>" + "<td>" + beerABV + "</td>" + "<td>" + beerIBU + "</td>" + "</tr>";
       console.log(listing);
       $(".browseTable").append(listing);
     });
