@@ -238,14 +238,14 @@ var getRandomBeerByStyle = function(style){
 //Event Listener randomBeer.html buttons//
   $('.randBtn').on('click', function(e){
     $(document).ajaxStart(function() {
-      $("#loading").show();
+      $("#loading").fadeIn(1000);
     });
     requestBeersByStyle(e.target.id);
     setTimeout(function() {
       var beer = getRandomBeerByStyle(e.target.id);
       var beerId = beer.id;
-      $("#loading").hide().fadeOut("slow");
-      window.open('beer.html' + '?id=' + beerId);
+      // $("#loading").hide();
+      window.open('beer.html' + '?id=' + beerId, '_self');
       // $(".pageTitle").html(beer.name);
 
       console.log(beer);
