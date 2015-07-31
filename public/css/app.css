@@ -689,7 +689,21 @@ p {
 }
 
 .browseSelector {
+  background: white url(http://cdn.myfonts.net/s/images/iconsets/myfonts/header_menu_arrow.png) no-repeat right center;
+  border: 1px solid #ffffff;
+  display: block;
+  overflow: hidden;
+  width: 250px;
 }
+
+select {
+  font-family: 'Raleway', sans-serif;
+  background: transparent;
+  border: none;
+  width: 270px;
+}
+
+
 
 .browse {
   color: white;
@@ -733,8 +747,8 @@ p {
 
 .browseSelector {
   float: right;
-  padding-right: 2%;
-  padding-top: 3%;
+  margin-top: 3%;
+  margin-right: 2%;;
 }
 
 .browseStyle {
