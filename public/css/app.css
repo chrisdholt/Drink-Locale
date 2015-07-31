@@ -49,7 +49,7 @@ p {
 }
 
 .pageTitle:hover {
-  color: gold;
+  color: #F0A800;
 }
 
 .nav {
@@ -76,7 +76,7 @@ p {
 }
 
 .underline:hover {
-  color: gold;
+  color: #F0A800;
 }
 
 .underline:after {
@@ -90,7 +90,7 @@ p {
 }
 .underline:hover:after {
   width: 100%;
-  background: gold;
+  background: #F0A800;
 }
 
 #icons {
@@ -120,7 +120,7 @@ p {
 }
 
 .randInner h1 a:hover {
-  color: gold;
+  color: #F0A800;
   text-decoration: none;
 }
 
@@ -130,7 +130,7 @@ p {
 }
 
 .histInner h1 a:hover {
-  color: gold;
+  color: #F0A800;
   text-decoration: none;
 }
 
@@ -140,20 +140,20 @@ p {
 }
 
 .searchInner h1 a:hover {
-  color: gold;
+  color: #F0A800;
   text-decoration: none;
 }
 
 .fa-beer:hover:before {
-  color: gold;
+  color: #F0A800;
 }
 
 .fa-file-text-o:hover:before {
-  color: gold;
+  color: #F0A800;
 }
 
 .fa-search:hover:before {
-  color: gold;
+  color: #F0A800;
 }
 
 .historyBeer {
@@ -266,7 +266,7 @@ p {
 }
 
 .histTH {
-  border-bottom: 1px solid gold;
+  border-bottom: 1px solid #F0A800;
   text-align: left;
 }
 
@@ -281,7 +281,7 @@ p {
 .historyList tr td {
   padding-top: 1%;
   padding-bottom: 1%;
-  border-bottom: 1px solid gold;
+  border-bottom: 1px solid #F0A800;
 }
 
 .historyList a {
@@ -290,7 +290,7 @@ p {
 }
 
 .historyList a:hover {
-  color: gold;
+  color: #F0A800;
 }
 
  /*AGE VERIFICATION*/
@@ -323,7 +323,7 @@ p {
   width: 50%;
   background-color: black;
   height: 20%;
-  border: 2px solid gold;
+  border: 2px solid #F0A800;
   margin-top: 10%;
   padding-top: 3%;
   padding-bottom: 5%;
@@ -456,7 +456,14 @@ p {
   width: 60%;
   font-size: 1.4em;
   background-color: white;
-  border: none;
+  border: 2px solid white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+.randBtn:hover {
+  background-color: transparent;
+  color: #F0A800;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
 }
@@ -468,8 +475,7 @@ p {
   margin-top: 2%;
   width: 30%;
   font-size: 1.4em;
-  background-color: white;
-  border: none;
+  border: 2px solid white;
 }
 
 .randL {
@@ -559,7 +565,7 @@ p {
   position: relative;
   width: 150px;
   margin: 5%;
-  height: 150px;;;
+  height: 150px;
 }
 
 .card {
@@ -580,9 +586,10 @@ p {
   overflow: hidden;
   width: 100%;
 }
+
 .card .back {
-  background: #eaeaed;
-  color: orange;
+  background: transparent;
+  color: #F0A800;
   line-height: 150px;
   text-align: center;
   transform: rotateY(180deg);
@@ -694,7 +701,7 @@ p {
 
 .browseTH {
   padding-top: 1%;
-  border-bottom: 1px solid gold;
+  border-bottom: 1px solid #F0A800;
   text-align: left;
 }
 
@@ -712,7 +719,7 @@ p {
 .browseTable tr td {
   padding-top: 1%;
   padding-bottom: 1%;
-  border-bottom: 1px solid gold;
+  border-bottom: 1px solid #F0A800;
 }
 
 .browseTable a {
