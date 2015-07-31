@@ -1,52 +1,9 @@
+'use strict';
 $(document).ready(function() {
-
-  //Get the user's history from local storage
-  var history = [];
-  if(localStorage["beerHistory"]) {
-    history = JSON.parse(localStorage["beerHistory"]);
-  }
-
-  //Render the user's history to the page
-  var renderHistory = function() {
-    var listing;
-    var beerLink;
-    var beerABV;
-    var beerIBU;
-    $(".histTable").append('<thead><tr class="histTH"><th><h3>Beer Name</h3></th><th><h3>Brewery</h3></th><th><h3>Beer Style</h3></th><th class="abvTH"><h3>ABV</h3></th><th class="ibuTH"><h3>IBU</h3></th></tr></thead>');
-    history.forEach(function(beer) {
-      beerStyle = getBeerStyle(beer);
-      beerABV = beer.abv;
-      beerIBU = beer.ibu;
-      if(!beerABV) {
-        beerABV = "???";
-      }
-      if(!beerIBU) {
-        beerIBU = "???";
-      }
-      beerLink = '<a href="./beer.html?id=' + beer.id + '&style=' + beerStyle + '">' + beer.nameDisplay + "</a>";
-      console.log(beerLink);
-      listing = '<tr><td class="name">' + beerLink + "</td>" + "<td>" + beer.breweries[0].name + "</td>" + "<td>" + beer.style.shortName + "</td>" + "<td>" + beerABV + "</td>" + "<td>" + beerIBU + "</td>" + "</tr>";
-      console.log(listing);
-      $(".historyList").append(listing);
-    });
-  }
-
-  //Get the style category from our app that the beer belongs to
-  var getBeerStyle = function(beer) {
-    for (var i = 0; i < styles.length; i++) {
-      for (var j = 0; j < styles[i][0].length; j++) {
-        if (styles[i][0][j] == beer.style.shortName) {
-          return styles[i][1];
-        };
-      };
-    };
-    return false;
-  }
-
-  //Our categories of beer
+//Our categories of beer
   //ipa, strongAle, stoutPorter, lagerPilsner, scotch, pale,
   //wheat, belgian, sour, bock, misc
-  var styles = [ipa, strongAle, stoutPorter, lagerPilsner, scotch, pale, wheat, belgian, sour, bock, misc];
+
   var ipa = [[
     'Imperial IPA',
     'American IPA',
@@ -54,7 +11,7 @@ $(document).ready(function() {
     'Wet Hop Ale',
     'Imperial Red',
     'Irish Red'
-    ], "ipa"];
+    ], 'ipa'];
 
   var strongAle = [[
     'American Strong Pale',
@@ -70,7 +27,7 @@ $(document).ready(function() {
     'Aged Beer',
     'Strong Ale',
     'Malt Liquor'
-    ], "strongAle"];
+    ], 'strongAle'];
 
   var stoutPorter = [[
     'American Stout',
@@ -87,7 +44,7 @@ $(document).ready(function() {
     'Robust Porter',
     'Brown Porter',
     'American Brown'
-    ], "stoutPorter"];
+    ], 'stoutPorter'];
 
   var lagerPilsner = [[
     'Vienna Lager',
@@ -105,12 +62,12 @@ $(document).ready(function() {
     'Black Ale',
     'Schwarzbier',
     'Euro Dark'
-    ], "lagerPilsner"];
+    ], 'lagerPilsner'];
 
   var scotch = [[
    'Scottish Export',
    'Scotch Ale'
-   ], "scotch"];
+   ], 'scotch'];
 
   var pale = [[
     'Special Bitter',
@@ -126,7 +83,7 @@ $(document).ready(function() {
     'American Pale',
     'German Rye',
     'Rye Ale'
-    ], "pale"];
+    ], 'pale'];
 
   var wheat = [[
    'Witbier',
@@ -134,7 +91,7 @@ $(document).ready(function() {
    'Dunkelweizen',
    'Hefeweizen',
    'Bernsteinfarbenesweizen'
-   ], "wheat"];
+   ], 'wheat'];
 
   var belgian = [[
     'Belgian Pale',
@@ -146,15 +103,15 @@ $(document).ready(function() {
     'Belgian Ale',
     'Belgian Tripel',
     'Saison',
-    'American/Belgian Pale',
-  ], "belgian"];
+    'American/Belgian Pale'
+  ], 'belgian'];
 
   var sour = [[
     'BBL Aged Sour',
     'Sour',
     'Brett',
     'Berlinerweisse'
-  ], "sour"];
+  ], 'sour'];
 
   var bock = [[
     'Doppelbock',
@@ -162,7 +119,7 @@ $(document).ready(function() {
     'Bock',
     'Weizenbock',
     'Altbier'
-  ], "bock"];
+  ], 'bock'];
 
   var misc = [[
     'Specialty',
@@ -176,8 +133,55 @@ $(document).ready(function() {
     'Experimental Beer',
     'Flavored Malt Beverage',
     'Experimental Beer'
-  ], "misc"];
+  ], 'misc'];
   var styles = [ipa, strongAle, stoutPorter, lagerPilsner, scotch, pale, wheat, belgian, sour, bock, misc];
+
+  //Get the user's history from local storage
+  var history = [];
+  if(localStorage.beerHistory) {
+    history = JSON.parse(localStorage.beerHistory);
+  }
+
+  //Get the style category from our app that the beer belongs to
+  var getBeerStyle = function(beer) {
+    for (var i = 0; i < styles.length; i++) {
+      for (var j = 0; j < styles[i][0].length; j++) {
+        if (styles[i][0][j] === beer.style.shortName) {
+          return styles[i][1];
+        }
+      }
+    }
+    return false;
+  };
+
+
+  //Render the user's history to the page
+  var renderHistory = function() {
+    var listing;
+    var beerLink;
+    var beerABV;
+    var beerIBU;
+    $('.histTable').append('<thead><tr class="histTH"><th><h3>Beer Name</h3></th><th><h3>Brewery</h3></th><th><h3>Beer Style</h3></th><th class="abvTH"><h3>ABV</h3></th><th class="ibuTH"><h3>IBU</h3></th></tr></thead>');
+    history.forEach(function(beer) {
+      var beerStyle = getBeerStyle(beer);
+      beerABV = beer.abv;
+      beerIBU = beer.ibu;
+      if(!beerABV) {
+        beerABV = '???';
+      }
+      if(!beerIBU) {
+        beerIBU = '???';
+      }
+      beerLink = '<a href="./beer.html?id=' + beer.id + '&style=' + beerStyle + '">' + beer.nameDisplay + '</a>';
+      console.log(beerLink);
+      listing = '<tr><td class="name">' + beerLink + '</td>' + '<td>' + beer.breweries[0].name + '</td>' + '<td>' + beer.style.shortName + '</td>' + '<td>' + beerABV + '</td>' + '<td>' + beerIBU + '</td>' + '</tr>';
+      console.log(listing);
+      $('.historyList').append(listing);
+    });
+  };
+
+
+
 
   renderHistory();
 
