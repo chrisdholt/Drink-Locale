@@ -39,77 +39,77 @@ var beerHistory = [];
   var requestBeersByStyle = function(style) {
 
   switch(style) {
-    case 'ipa':
+      case 'ipa':
       if(ipa) {
         return;
       } else {
         collection = ipaId;
       }
       break;
-    case 'strongAle':
+      case 'strongAle':
       if(strongAle) {
         return;
       } else {
       collection = strongAleId;
       }
       break;
-    case 'stoutPorter':
+      case 'stoutPorter':
       if(stoutPorter) {
         return;
       } else {
         collection = stoutPorterId;
       }
       break;
-    case 'lagerPilsner':
+      case 'lagerPilsner':
       if(lagerPilsner) {
         return;
       } else {
       collection = lagerPilsnerId;
       }
       break;
-    case 'scotch':
+      case 'scotch':
       if(scotch) {
         return;
       } else {
         collection = scotchId;
       }
       break;
-    case 'pale':
+      case 'pale':
       if(pale) {
         return;
       } else {
         collection = paleId;
       }
       break;
-    case 'wheat':
+      case 'wheat':
       if(wheat) {
         return;
       } else {
         collection = wheatId;
       }
       break;
-    case 'belgian':
+      case 'belgian':
       if(belgian) {
         return;
       } else {
         collection = belgianId;
       }
       break;
-    case 'sour':
+      case 'sour':
       if(sour) {
         return;
       } else {
         collection = sourId;
       }
       break;
-    case 'bock':
+      case 'bock':
       if(bock) {
         return;
       } else {
         collection = bockId;
       }
       break;
-    case 'misc':
+      case 'misc':
       if(misc) {
         return;
       } else {
@@ -127,12 +127,9 @@ var beerHistory = [];
     success: console.log('Connected to MongoDB')
   })
   .done(function(response) {
-    // console.log('in done');
     switch(style) {
       case 'ipa':
-        // console.log('ipa bitches!');
         ipa = response.data;
-        // console.log(ipa);
         break;
       case 'strongAle':
         strongAle = response.data;
