@@ -126,6 +126,7 @@ var beerHistory = [];
     dataType: dataType,
     success: console.log('Connected to MongoDB')
   })
+
   .done(function(response) {
     switch(style) {
       case 'ipa':
@@ -224,7 +225,7 @@ var getRandomBeerByStyle = function(style){
       console.log('The beers were the same!');
       loopCounter++;
       if(loopCounter >= 100) {
-        alert('You\'ve explored all the beers from this style! It will appear in your history twice. Please pick a different style.');
+        console.log('You\'ve explored all the beers from this style! It will appear in your history twice. Please pick a different style.');
         break;
       }
       return getRandomBeerByStyle(style);
@@ -337,7 +338,7 @@ var getRandomBeerByStyle = function(style){
         break;
     }
     $('.browseTable').empty();
-    $('.browseTable').append('<thead><tr class=\'browseTH\'><th><h3>Beer Name</h3></th><th><h3>Brewery</h3></th><th><h3>Beer Style</h3></th><th class=\'abvTH\'><h3>ABV</h3></th><th class=\'ibuTH\'><h3>IBU</h3></th></tr></thead>');
+    $('.browseTable').append('<thead><tr class="browseTH"><th><h3>Beer Name</h3></th><th><h3>Brewery</h3></th><th><h3>Beer Style</h3></th><th class="abvTH"><h3>ABV</h3></th><th class="ibuTH"><h3>IBU</h3></th></tr></thead>');
 
     bucket.forEach(function(beer) {
       var beerABV = beer.abv;
@@ -348,9 +349,9 @@ var getRandomBeerByStyle = function(style){
       if(!beerIBU) {
         beerIBU = '???';
       }
-      var beerLink = '<a href=\'./beer.html?id=' + beer.id + '&style=' + style + '>' + beer.name + '</a>';
+      var beerLink = '<a href="./beer.html?id="' + beer.id + '&style=' + style + '">' + beer.name + '</a>';
 
-      listing = '<tr><td class=\'name\'>' + beerLink + '</td>' + '<td>' + beer.breweries[0].name + '</td>' + '<td>' + beer.style.shortName + '</td>' + '<td>' + beerABV + '</td>' + '<td>' + beerIBU + '</td>' + '</tr>';
+      listing = '<tr><td class="name">' + beerLink + '</td>' + '<td>' + beer.breweries[0].name + '</td>' + '<td>' + beer.style.shortName + '</td>' + '<td>' + beerABV + '</td>' + '<td>' + beerIBU + '</td>' + '</tr>';
 
       $('.browseTable').append(listing);
     });
