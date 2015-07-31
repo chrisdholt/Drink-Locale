@@ -42,7 +42,7 @@ p {
   float:left;
   max-width: 30%;;
   color: white;
-  padding-left: 2%;
+  padding-left: 3%;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1.6em;
@@ -50,6 +50,14 @@ p {
 
 .pageTitle:hover {
   color: #F0A800;
+}
+
+.ale {
+  color: #F0A800;
+}
+
+.ale:hover {
+  color: white;
 }
 
 .nav {
