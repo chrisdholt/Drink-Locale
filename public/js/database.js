@@ -349,7 +349,7 @@ var getRandomBeerByStyle = function(style){
       if(!beerIBU) {
         beerIBU = '???';
       }
-      var beerLink = '<a href="./beer.html?id="' + beer.id + '&style=' + style + '">' + beer.name + '</a>';
+      var beerLink = '<a href="./beer.html?id=' + beer.id + '&style=' + style + '">' + beer.name + '</a>';
 
       listing = '<tr><td class="name">' + beerLink + '</td>' + '<td>' + beer.breweries[0].name + '</td>' + '<td>' + beer.style.shortName + '</td>' + '<td>' + beerABV + '</td>' + '<td>' + beerIBU + '</td>' + '</tr>';
 
