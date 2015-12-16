@@ -24,6 +24,7 @@
     "gulp-autoprefixer": "^3.1.0",
     "gulp-notify": "^2.2.0",
     "gulp-sass": "^2.1.1",
+    "node-bourbon": "^4.2.3",
     "request": "^2.60.0",
     "require-dir": "^0.3.0"
   }
