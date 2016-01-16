@@ -1,0 +1,19 @@
+.selection-grid {
+  position: relative;
+  padding: 5em;
+  @include flex-box($align: space-around, $wrap: wrap, $direction: row, $justify: center);
+  @media only screen and (min-width: $break){
+
+  }
+
+  h2 {
+    order: 1;
+    text-align: left;
+    flex-basis: 90%;
+  }
+
+  .btn-large {
+    order: 2;
+    margin: .5em 1em;
+  }
+}

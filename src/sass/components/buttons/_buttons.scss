@@ -1,0 +1,21 @@
+%button-styles {
+  font-family: 'Raleway', sans-serif;
+  border: 2px solid white;
+  padding: 1em 0;
+  text-align: center;
+  @media only screen and (min-width: $break){
+
+  }
+}
+
+.btn-large {
+  @extend %button-styles;
+  background-color: white;
+  font-size: em(22);
+  font-weight: 600;
+  width: 10em;
+  &:hover {
+    background-color: transparent;
+  }
+}
+
