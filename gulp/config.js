@@ -15,7 +15,7 @@ module.exports = {
     dest: dest + "/images"
   },
   fonts: {
-    src: src + '/sass/fonts/**/*',
+    src: src + '/fonts/**/*',
     dest: dest + "/fonts/",
     extensions: ['woff2', 'woff', 'eot', 'ttf', 'svg']
   },
