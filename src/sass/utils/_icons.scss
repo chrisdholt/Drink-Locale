@@ -14,9 +14,9 @@
 }
 
 $icons:
-(beer "\e900")
-(history "\e9ae")
-(search "\eb30");
+(beer '\e900')
+(history '\e9ae')
+(search '\eb30');
 
 @each $icon in $icons {
   .icon-#{nth($icon, 1)} {
@@ -24,10 +24,7 @@ $icons:
     color: color('primary', 'base');
     font-size: em(90);
     &:before {
-      content: #{nth($icon, 2)};
-    }
-    &:hover {
-      color: color('secondary', 'base');
+      content: nth($icon, 2);
     }
   }
 }

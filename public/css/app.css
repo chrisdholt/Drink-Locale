@@ -542,16 +542,16 @@ p {
 
  /*ABOUT CARDS*/
 
-.card-container {
+/*.card-container {
   cursor: pointer;
   perspective: 600;
   position: relative;
   width: 150px;
   margin: 5%;
   height: 150px;
-}
+}*/
 
-.card {
+/*.card {
   height: 100%;
   position: absolute;
   transform-style: preserve-3d;
@@ -576,7 +576,7 @@ p {
   line-height: 150px;
   text-align: center;
   transform: rotateY(180deg);
-}
+}*/
 
 .about-image{
   height: 100%;

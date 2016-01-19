@@ -1,0 +1,24 @@
+.card-primary {
+  padding: 1em;
+  text-align: center;
+
+  a {
+    color: color('primary', 'base');
+
+    &:hover {
+      color: color('secondary', 'base');
+    }
+
+    h2 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin: 1em 0;
+    }
+
+    p {
+      font-family: 'Raleway', sans-serif;
+      margin: 1em 0;
+    }
+  }
+}

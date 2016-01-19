@@ -1,0 +1,12 @@
+.card-container {
+  @include flex-box($align: center, $wrap: null, $direction: column, $justify: center);
+  padding: 5em 0;
+
+  @media only screen and (min-width: $break){
+    @include flex-box($align: center, $wrap: nowrap, $direction: row, $justify: center);
+  }
+
+  .card-primary {
+    flex-basis: 25%;
+  }
+}
