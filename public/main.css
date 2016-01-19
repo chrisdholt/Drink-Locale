@@ -166,6 +166,39 @@ a {
   color: #F0A800;
 }
 
+.main-home, .main-browse, .main-history, .main-beer, .main-random, .main-about, .main-error {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main-home {
+  background-image: url(/images/HomePic.jpg);
+}
+
+.main-browse {
+  background-image: url(/images/randomBeer.jpg);
+}
+
+.main-history {
+  background-image: url(/images/beerPour.jpg);
+}
+
+.main-beer {
+  background-image: url(/images/beerBack.jpg);
+}
+
+.main-random {
+  background-image: url(/images/craftBeer.jpg);
+}
+
+.main-about {
+  background-image: url(/images/about.jpg);
+}
+
+.main-error {
+  background-image: url(/images/empty.jpg);
+}
+
 .header {
   display: -webkit-box;
   display: -moz-box;
@@ -200,7 +233,7 @@ a {
   -o-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: justify;
-  margin: 1em;
+  margin: 2em;
 }
 
 .header .site-title {

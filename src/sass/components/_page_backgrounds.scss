@@ -1,0 +1,20 @@
+%background-base {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+$pages:
+(home '/images/HomePic.jpg')
+(browse '/images/randomBeer.jpg')
+(history '/images/beerPour.jpg')
+(beer '/images/beerBack.jpg')
+(random '/images/craftBeer.jpg')
+(about '/images/about.jpg')
+(error '/images/empty.jpg');
+
+@each $page in $pages {
+  .main-#{nth($page, 1)} {
+    background-image: url(#{nth($page, 2)});
+    @extend %background-base;
+  }
+}
