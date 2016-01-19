@@ -1,0 +1,9 @@
+//Map-Get Function for Colors
+@function color($color-name, $color-variant) {
+  @return map-get(map-get($colors, $color-name), $color-variant);
+}
+
+//Map-Get Function for Font-Family
+@function font-family($font-name, $font-variant) {
+  @return map-get(map-get($font-family, $font-name), $font-variant);
+}

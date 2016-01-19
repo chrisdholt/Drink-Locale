@@ -1,0 +1,18 @@
+.main-nav {
+  @include flex-box($align: center, $wrap: wrap, $direction: row, $justify: flex-end);
+
+  .nav-link {
+    a {
+      text-align: right;
+      margin: 0 2em;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: color('primary', 'base');
+
+      &:hover {
+        color: color('secondary', 'base');
+      }
+    }
+  }
+}

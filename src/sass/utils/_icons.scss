@@ -21,10 +21,13 @@ $icons:
 @each $icon in $icons {
   .icon-#{nth($icon, 1)} {
     @extend %icon-base;
-    color: #ffffff;
+    color: color('primary', 'base');
     font-size: em(90);
     &:before {
       content: #{nth($icon, 2)};
+    }
+    &:hover {
+      color: color('secondary', 'base');
     }
   }
 }

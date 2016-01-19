@@ -1,0 +1,12 @@
+.header {
+  @include flex-box($align: center, $wrap: nowrap, $direction: row, $justify: space-between);
+  margin: 2em;
+
+  .site-title {
+    flex-basis: 20%;
+  }
+
+  nav {
+    flex-basis: 78%;
+  }
+}
