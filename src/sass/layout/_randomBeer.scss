@@ -1,19 +1,32 @@
-.selection-grid {
-  position: relative;
-  padding: 5em;
-  @include flex-box($align: space-around, $wrap: wrap, $direction: row, $justify: center);
-  @media only screen and (min-width: $break){
-
-  }
+.wrapper {
 
   h2 {
-    order: 1;
-    text-align: left;
-    flex-basis: 90%;
+    font-family: font-family('primary', 'light');
+    color: color('primary', 'base');
+    font-size: em(32);
+    margin: 1em;
+    text-align: center;
+
+    @media only screen and (min-width: $break){
+      margin: 0 1em .75em 0;
+      text-align: left;
+    }
   }
 
-  .btn-large {
-    order: 2;
-    margin: .5em 1em;
+  .selection-grid {
+    padding: 1em;
+    @include flex-box($align: center, $wrap: wrap, $direction: row, $justify: center);
+    @media only screen and (min-width: $break){
+      @include flex-box($align: center, $wrap: wrap, $direction: row, $justify: center);
+      padding: 1em 0;
+    }
+
+    .btn-large {
+      margin: .5em auto;
+
+      @media only screen and (min-width: $break){
+        margin: 1em auto;
+      }
+    }
   }
 }

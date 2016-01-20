@@ -10,44 +10,49 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   </head>
   <body class="main-random">
-    <div id="preloader">
+<!-- REWRITE - If no token from local storage, write this into DOM -->
+<!--     <div id="preloader">
       <div id="status">&nbsp;</div>
     </div>
-    <div id="ajaxLoad">
+    <section id="ajaxLoad">
       <div id="loading" class="loading"></div>
-    </div>
+    </section>
     <div id='ageVerWrap' class="hide">
       <div id='ageVer'>
         <h1 class="ofAge">I Am Of Legal Drinking Age</h1>
         <p><button id="confirmY" class="ageBtn">YES</button>
         <button id='confirmNot' class="ageBtn">NO</button></p>
       </div>
-    </div>
-    <header class="headWrap">
-        <a href="index.html"><h2 class="pageTitle">Loc<span class="ale">ale</span></h2></a>
-      <nav class="nav">
-        <ul>
-          <li class="navLink"><a class="underline" href="about.html">About Us</a></li>
-          <li class="navLink"><a class="underline" href="history.html">Beer History</a></li>
-          <li class="navLink"><a class="underline" href="randomBeer.html">Random Beer</a></li>
-          <li class="navLink"><a class="underline" href="browse.html">Browse</a></li>
+    </div> -->
+    <header class="header">
+      <h1 class="site-title"><a href="index.html">Loc<span class="ale">ale</span></a></h1>
+      <nav>
+        <ul class="main-nav">
+          <li class="nav-link"><a href="about.html">About</a></li>
+          <li class="nav-link"><a href="history.html">History</a></li>
+          <li class="nav-link"><a href="randomBeer.html">Random Beer</a></li>
+          <li class="nav-link"><a href="browse.html">Browse</a></li>
         </ul>
       </nav>
     </header>
-    <section class="selection-grid">
-      <h2 class="pickStyle">PICK A STYLE</h2>
-      <a id="ipa" class="btn-large">India Pale Ale</a>
-      <a id="strongAle" class="btn-large">Strong Ale</a>
-      <a id="stoutPorter" class="btn-large">Stout/Porter</a>
-      <a id="scotch" class="btn-large">Scotch Ale</a>
-      <a id="pale" class="btn-large">Pale Ale</a>
-      <a id="lagerPilsner" class="btn-large">Lager/Pilsner</a>
-      <a id="wheat" class="btn-large">Wheat Ale</a>
-      <a id="belgian" class="btn-large">Belgian</a>
-      <a id="sour" class="btn-large">Sour</a>
-      <a id="bock" class="btn-large">Bock</a>
-      <a id="misc" class="btn-large">Something Else</a>
-    </section>
+    <main>
+      <section class="wrapper">
+        <h2>Pick a Style</h2>
+        <div class="selection-grid">
+          <a id="ipa" class="btn-large">India Pale Ale</a>
+          <a id="strongAle" class="btn-large">Strong Ale</a>
+          <a id="stoutPorter" class="btn-large">Stout/Porter</a>
+          <a id="scotch" class="btn-large">Scotch Ale</a>
+          <a id="pale" class="btn-large">Pale Ale</a>
+          <a id="lagerPilsner" class="btn-large">Lager/Pilsner</a>
+          <a id="wheat" class="btn-large">Wheat Ale</a>
+          <a id="belgian" class="btn-large">Belgian</a>
+          <a id="sour" class="btn-large">Sour</a>
+          <a id="bock" class="btn-large">Bock</a>
+          <a id="misc" class="btn-large">Other</a>
+        </div>
+      </section>
+    </main>
     <footer class="footer">
       <p>“Beer, it’s the best damn drink in the world.” - Jack Nicholson</p>
     </footer>

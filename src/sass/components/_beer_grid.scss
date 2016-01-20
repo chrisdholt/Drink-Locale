@@ -2,11 +2,11 @@
   font-family: font-family('primary', 'regular');
   color: color('primary', 'base');
   width: 100%;
-  padding: 1em;
   overflow-x: scroll;
+  min-height: em(300);
   @media only screen and (min-width: $break){
     overflow: scroll;
-    height: 410px;
+    height: em(400);
   }
 
   .beer-grid-table {
@@ -16,7 +16,9 @@
     }
 
     th {
-      padding-top: 1em;
+      font-family: font-family('primary', 'medium');
+      font-size: em(18);
+      padding: 0 .5em;
       border-bottom: 1px solid #F0A800;
       text-align: left;
     }
@@ -24,6 +26,9 @@
     tr {
       td {
         padding: .75em .5em;
+        &:last-child {
+          padding: .75em .65em;
+        }
       }
     }
 

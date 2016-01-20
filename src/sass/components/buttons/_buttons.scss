@@ -1,7 +1,9 @@
 %button-styles {
   font-family: font-family('primary', 'bold');
-  padding: 1em 0;
+  padding: .5em 0;
   text-align: center;
+  border: 2px solid;
+  border-color: color('primary', 'base');
   @media only screen and (min-width: $break){
 
   }
@@ -9,12 +11,13 @@
 
 .btn-large {
   @extend %button-styles;
-  background-color: color('primary', 'base');
-  border: 2px solid white;
+  background-color: rgba(0,0,0,0.7);
   font-size: em(22);
+  color: color('secondary', 'base');
   width: 10em;
   &:hover {
-    background-color: transparent;
+    background-color: color('primary', 'base');
+
   }
 }
 
@@ -22,6 +25,7 @@
   @extend %button-styles;
   background-color: color('secondary', 'base');
   color: color('primary', 'base');
+  border: none;
   font-size: em(22);
   padding: 1em;
   &:hover {

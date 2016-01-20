@@ -245,7 +245,7 @@ p {
 
 /*HISTORY */
 
-.main-history {
+/*.main-history {
   width: 100%;
   background-image: url(/images/beerPour.jpg);
   background-repeat: no-repeat;
@@ -294,7 +294,7 @@ p {
 .historyList a {
   text-decoration: none;
   color: white;
-}
+}*/
 
  /*AGE VERIFICATION
 
@@ -394,7 +394,7 @@ p {
   max-width: 60%;
 }
 
-.simBtn {
+/*.btn-large-alt {
   display: inline;
   margin-left: auto;
   margin-right: auto;
@@ -409,16 +409,16 @@ p {
   margin-bottom: 2%;
 }
 
-.simBtn:hover {
+.btn-large-alt:hover {
   background-color: transparent;
   color: #F0A800;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
-}
+}*/
 
 /* RANDOM BEER PAGE */
 
-.main-randomBeer {
+/*.main-randomBeer {
   width: 100%;
   background-image: url(/images/craftBeer.jpg);
   background-size: cover;
@@ -439,8 +439,8 @@ p {
   overflow: hidden;
   padding-right: 0%;
   padding-left: 0%;
-}
-
+}*/
+/*
 #misc {
   display: inline-block;
   margin-left: auto;
@@ -449,7 +449,7 @@ p {
   width: 30%;
   font-size: 1.4em;
   border: 2px solid white;
-}
+}*/
 
 .randL {
   width: 50%;
@@ -601,7 +601,7 @@ p {
 
 
 /* 404 */
-
+/*
 .main-404 {
   width: 100%;
   background-image: url(/images/empty.jpg);
@@ -629,7 +629,7 @@ p {
 .H2-404 {
   font-size: 3em;
   color: white;
-}
+}*/
 
 
 /* BROWSE */

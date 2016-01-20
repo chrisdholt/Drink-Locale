@@ -159,24 +159,27 @@ a {
 
 .btn-large, .btn-alt {
   font-family: "Raleway-Bold", sans-serif;
-  padding: 1em 0;
+  padding: .5em 0;
   text-align: center;
+  border: 2px solid;
+  border-color: #ffffff;
 }
 
 .btn-large {
-  background-color: #ffffff;
-  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.7);
   font-size: 1.375em;
+  color: #F0A800;
   width: 10em;
 }
 
 .btn-large:hover {
-  background-color: transparent;
+  background-color: #ffffff;
 }
 
 .btn-alt {
   background-color: #F0A800;
   color: #ffffff;
+  border: none;
   font-size: 1.375em;
   padding: 1em;
 }
@@ -562,14 +565,14 @@ a {
   font-family: "Raleway-Regular", sans-serif;
   color: #ffffff;
   width: 100%;
-  padding: 1em;
   overflow-x: scroll;
+  min-height: 18.75em;
 }
 
 @media only screen and (min-width: 50em) {
   .beer-grid {
     overflow: scroll;
-    height: 410px;
+    height: 25em;
   }
 }
 
@@ -578,13 +581,19 @@ a {
 }
 
 .beer-grid .beer-grid-table th {
-  padding-top: 1em;
+  font-family: "Raleway-Medium", sans-serif;
+  font-size: 1.125em;
+  padding: 0 .5em;
   border-bottom: 1px solid #F0A800;
   text-align: left;
 }
 
 .beer-grid .beer-grid-table tr td {
   padding: .75em .5em;
+}
+
+.beer-grid .beer-grid-table tr td:last-child {
+  padding: .75em .65em;
 }
 
 .beer-grid .beer-grid-table .beer-list-item:hover {
@@ -621,9 +630,23 @@ a {
   }
 }
 
-.selection-grid {
-  position: relative;
-  padding: 5em;
+.wrapper h2 {
+  font-family: "Raleway-Light", sans-serif;
+  color: #ffffff;
+  font-size: 2em;
+  margin: 1em;
+  text-align: center;
+}
+
+@media only screen and (min-width: 50em) {
+  .wrapper h2 {
+    margin: 0 1em .75em 0;
+    text-align: left;
+  }
+}
+
+.wrapper .selection-grid {
+  padding: 1em;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -631,13 +654,13 @@ a {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  box-align: space-around;
-  -webkit-align-items: space-around;
-  -moz-align-items: space-around;
-  -ms-align-items: space-around;
-  -o-align-items: space-around;
-  align-items: space-around;
-  -ms-flex-align: space-around;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
   -webkit-box-lines: multiple;
   -moz-box-lines: multiple;
   box-lines: multiple;
@@ -659,24 +682,56 @@ a {
   -ms-flex-pack: center;
 }
 
-.selection-grid h2 {
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
-  text-align: left;
-  -webkit-flex-basis: 90%;
-  -ms-flex-preferred-size: 90%;
-  flex-basis: 90%;
+@media only screen and (min-width: 50em) {
+  .wrapper .selection-grid {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    box-orient: horizontal;
+    box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    padding: 1em 0;
+  }
 }
 
-.selection-grid .btn-large {
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
-  margin: .5em 1em;
+.wrapper .selection-grid .btn-large {
+  margin: .5em auto;
 }
 
-.historyWrap {
+@media only screen and (min-width: 50em) {
+  .wrapper .selection-grid .btn-large {
+    margin: 1em auto;
+  }
+}
+
+.wrapper {
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -714,7 +769,7 @@ a {
 }
 
 @media only screen and (min-width: 50em) {
-  .historyWrap {
+  .wrapper {
     display: -webkit-box;
     display: -moz-box;
     display: box;
@@ -748,12 +803,12 @@ a {
     -o-justify-content: space-between;
     justify-content: space-between;
     -ms-flex-pack: justify;
-    padding: 2em;
+    padding: 2.5em 2em 1.85em 2em;
   }
 }
 
-.historyWrap h2 {
-  font-family: "Raleway-Regular", sans-serif;
+.wrapper h2 {
+  font-family: "Raleway-Light", sans-serif;
   color: #ffffff;
   font-size: 2em;
   margin: 1em;
@@ -761,18 +816,28 @@ a {
 }
 
 @media only screen and (min-width: 50em) {
-  .historyWrap h2 {
-    margin: 0 0 1em 0;
+  .wrapper h2 {
+    margin: 0 1em .75em 0;
   }
 }
 
-.historyWrap .selector-box {
+.wrapper .selector-box {
   margin: 1em;
 }
 
 @media only screen and (min-width: 50em) {
-  .historyWrap .selector-box {
-    margin: 0 0 1em 0;
+  .wrapper .selector-box {
+    margin: 0 1em 1.5em 0;
+  }
+}
+
+.wrapper .beer-grid {
+  padding: 1em;
+}
+
+@media only screen and (min-width: 50em) {
+  .wrapper .beer-grid {
+    padding: 1em 0;
   }
 }
 
