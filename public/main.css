@@ -165,6 +165,7 @@ a {
   border-color: #ffffff;
   width: 10em;
   font-size: 1.375em;
+  cursor: pointer;
 }
 
 .btn-large {

@@ -238,10 +238,10 @@ var getRandomBeerByStyle = function(style){
 };
 
 //Event Listener randomBeer.html buttons//
-  $('.randBtn').on('click', function(e){
-    $(document).ajaxStart(function() {
-      $('#loading').fadeIn(1000);
-    });
+  $('.btn-large').on('click', function(e){
+    // $(document).ajaxStart(function() {
+    //   $('#loading').fadeIn(1000);
+    // });
     requestBeersByStyle(e.target.id);
     setTimeout(function() {
       var beer = getRandomBeerByStyle(e.target.id);

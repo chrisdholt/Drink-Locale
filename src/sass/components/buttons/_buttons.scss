@@ -6,9 +6,7 @@
   border-color: color('primary', 'base');
   width: 10em;
   font-size: em(22);
-  @media only screen and (min-width: $break){
-
-  }
+  cursor: pointer;
 }
 
 .btn-large {
