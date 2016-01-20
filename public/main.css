@@ -76,6 +76,22 @@ a {
   color: white;
 }
 
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+select {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+
+main[class^="main-"] {
+  display: none;
+}
+
 @font-face {
   font-family: 'locale';
   src: url("/fonts/locale.eot?n54gim");
@@ -463,6 +479,40 @@ a {
   margin: 1em 0;
 }
 
+.card-secondary {
+  padding: .5em;
+  text-align: center;
+}
+
+@media only screen and (min-width: 50em) {
+  .card-secondary {
+    padding: 2em;
+  }
+}
+
+.card-secondary h3 {
+  font-family: "Raleway-Light", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 1em 0;
+}
+
+.card-secondary figure img {
+  max-width: 80%;
+}
+
+@media only screen and (min-width: 50em) {
+  .card-secondary figure img {
+    max-width: 100%;
+  }
+}
+
+.card-secondary p {
+  font-family: "Raleway-Light", sans-serif;
+  color: #ffffff;
+  margin: 1em 0;
+}
+
 .card-container {
   display: -webkit-box;
   display: -moz-box;
@@ -545,6 +595,21 @@ a {
   }
 }
 
+.card-container .card-secondary {
+  -webkit-flex-basis: 70%;
+  -ms-flex-preferred-size: 70%;
+  flex-basis: 70%;
+}
+
+@media only screen and (min-width: 50em) {
+  .card-container .card-secondary {
+    -webkit-flex-basis: 20%;
+    -ms-flex-preferred-size: 20%;
+    flex-basis: 20%;
+    margin: 2em auto;
+  }
+}
+
 .selector-box {
   background: white url(http://cdn.myfonts.net/s/images/iconsets/myfonts/header_menu_arrow.png) no-repeat right center;
   border: 1px solid #ffffff;
@@ -582,7 +647,7 @@ a {
 .beer-grid .beer-grid-table th {
   font-family: "Raleway-Medium", sans-serif;
   font-size: 1.125em;
-  padding: 0 .5em;
+  padding: 0 .5em .5em;
   border-bottom: 1px solid #F0A800;
   text-align: left;
 }
@@ -609,7 +674,7 @@ a {
 
 @media only screen and (min-width: 50em) {
   .footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
   }
 }
@@ -817,6 +882,21 @@ a {
 @media only screen and (min-width: 50em) {
   .wrapper h2 {
     margin: 0 1em .75em 0;
+  }
+}
+
+.wrapper p {
+  font-family: "Raleway-Light", sans-serif;
+  font-size: 1.125em;
+  color: #ffffff;
+  margin: 1em;
+  text-align: center;
+}
+
+@media only screen and (min-width: 50em) {
+  .wrapper p {
+    margin: 0;
+    text-align: left;
   }
 }
 
@@ -1042,6 +1122,16 @@ a {
     -webkit-order: 2;
     -ms-flex-order: 2;
     order: 2;
+  }
+}
+
+.main-about .card-container {
+  padding: 2em;
+}
+
+@media only screen and (min-width: 50em) {
+  .main-about .card-container {
+    padding: 0;
   }
 }
 

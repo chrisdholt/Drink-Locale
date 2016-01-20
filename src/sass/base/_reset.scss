@@ -33,3 +33,19 @@ a {
   text-decoration: none;
   color: white;
 }
+
+table{
+  border-collapse: collapse;
+  border-spacing:0
+}
+
+select {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle
+}
+
+main[class^="main-"] {
+  display: none;
+}

@@ -1,0 +1,10 @@
+.main-about {
+
+  .card-container {
+    padding: 2em;
+
+    @media only screen and (min-width: $break){
+      padding: 0;
+    }
+  }
+}

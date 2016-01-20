@@ -18,6 +18,18 @@
     }
   }
 
+  p {
+    font-family: font-family('primary', 'light');
+    font-size: em(18);
+    color: color('primary', 'base');
+    margin: 1em;
+    text-align: center;
+    @media only screen and (min-width: $break){
+      margin: 0;
+      text-align: left;
+    }
+  }
+
   .selector-box {
     margin: 1em;
 

@@ -6,7 +6,7 @@
   background-color: white;
 
   @media only screen and (min-width: $break){
-    position: absolute;
+    position: fixed;
     bottom: 0;
   }
 

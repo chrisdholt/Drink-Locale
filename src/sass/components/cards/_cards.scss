@@ -27,3 +27,32 @@
     }
   }
 }
+
+.card-secondary {
+  padding: .5em;
+  text-align: center;
+  @media only screen and (min-width: $break){
+    padding: 2em;
+  }
+  h3 {
+    font-family: font-family('primary', 'light');
+    color: color('primary', 'base');
+    text-transform: uppercase;
+    margin: 1em 0;
+  }
+
+  figure {
+    img {
+      max-width: 80%;
+      @media only screen and (min-width: $break){
+        max-width: 100%;
+      }
+    }
+  }
+
+  p {
+    font-family: font-family('primary', 'light');
+    color: color('primary', 'base');
+    margin: 1em 0;
+  }
+}

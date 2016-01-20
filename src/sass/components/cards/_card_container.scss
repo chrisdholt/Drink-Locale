@@ -11,4 +11,12 @@
     flex-basis: 25%;
     }
   }
+
+  .card-secondary {
+    flex-basis: 70%;
+    @media only screen and (min-width: $break){
+      flex-basis: 20%;
+      margin: 2em auto;
+    }
+  }
 }
