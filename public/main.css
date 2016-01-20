@@ -88,10 +88,6 @@ select {
   *vertical-align: middle;
 }
 
-main[class^="main-"] {
-  display: none;
-}
-
 @font-face {
   font-family: 'locale';
   src: url("/fonts/locale.eot?n54gim");
