@@ -10,3 +10,18 @@ $colors: (
     'base': #F0A800
   )
 );
+
+$font-family: (
+  'primary': (
+    'extra-light': ("Raleway-ExtraLight", sans-serif),
+    'extra-light-italic': ("Raleway-ExtraLight", sans-serif),
+    'light': ("Raleway-Light", sans-serif),
+    'light-italic': ("Raleway-LightItalic", sans-serif),
+    'regular': ("Raleway-Regular", sans-serif),
+    'italic': ("Raleway-Italic", sans-serif),
+    'medium': ("Raleway-Medium", sans-serif),
+    'bold': ("Raleway-Bold", sans-serif),
+    'thin': ("Raleway-Thin", sans-serif),
+    'thin-italic': ("Raleway-ThinItalic", sans-serif)
+  )
+);

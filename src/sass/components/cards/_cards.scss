@@ -16,14 +16,13 @@
     }
 
     h2 {
-      font-family: 'Raleway', sans-serif;
-      font-weight: 600;
+      font-family: font-family('primary', 'medium');
       text-transform: uppercase;
       margin: 1em 0;
     }
 
     p {
-      font-family: 'Raleway', sans-serif;
+      font-family: font-family('primary', 'light');
       margin: 1em 0;
     }
   }
