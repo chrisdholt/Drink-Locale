@@ -15,8 +15,8 @@
 
 $icons:
 (beer '\e900')
-(history '\e9ae')
-(search '\eb30');
+(history '\e902')
+(search '\e901');
 
 @each $icon in $icons {
   .icon-#{nth($icon, 1)} {

@@ -1,12 +1,18 @@
 .card-primary {
-  padding: 1em;
+  padding: 2em;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 1.5em auto;
 
   a {
     color: color('primary', 'base');
 
     &:hover {
       color: color('secondary', 'base');
+
+      span {
+        color: color('secondary', 'base');
+      }
     }
 
     h2 {
