@@ -1,0 +1,39 @@
+.main-error {
+  background-position-x: 20%;
+
+  section {
+    @include flex-box($align: center, $wrap: nowrap, $direction: column, $justify: center);
+    margin: 4em;
+    text-align: center;
+    @media only screen and (min-width: $break){
+      @include flex-box($align: flex-start, $wrap: nowrap, $direction: column, $justify: center);
+      text-align: left;
+    }
+
+    h1 {
+      font-family: font-family('primary', 'bold');
+      color: color('primary', 'base');
+      font-size: em(120);
+      @media only screen and (min-width: $break){
+        font-size: em(180);
+      }
+    }
+
+    p {
+      font-family: font-family('primary', 'medium');
+      color: color('primary', 'base');
+      font-size: em(42);
+      margin: 1em 0;
+      @media only screen and (min-width: $break){
+        font-size: em(48);
+      }
+    }
+
+    .btn-alt {
+      margin: 0 0 4em 0;
+      @media only screen and (min-width: $break){
+        margin: 0;
+      }
+    }
+  }
+}

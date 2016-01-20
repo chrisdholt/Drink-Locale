@@ -1,6 +1,5 @@
 %button-styles {
   font-family: font-family('primary', 'bold');
-  border: 2px solid white;
   padding: 1em 0;
   text-align: center;
   @media only screen and (min-width: $break){
@@ -10,11 +9,24 @@
 
 .btn-large {
   @extend %button-styles;
-  background-color: white;
+  background-color: color('primary', 'base');
+  border: 2px solid white;
   font-size: em(22);
   width: 10em;
   &:hover {
     background-color: transparent;
+  }
+}
+
+.btn-alt {
+  @extend %button-styles;
+  background-color: color('secondary', 'base');
+  color: color('primary', 'base');
+  font-size: em(22);
+  padding: 1em;
+  &:hover {
+    background-color: color('primary', 'base');
+    color: color('secondary', 'base');
   }
 }
 

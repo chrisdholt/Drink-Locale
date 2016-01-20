@@ -1,0 +1,24 @@
+.header {
+  @include flex-box($align: center, $wrap: nowrap, $direction: column, $justify: center);
+  margin: 1em;
+  @media only screen and (min-width: $break){
+    @include flex-box($align: center, $wrap: nowrap, $direction: row, $justify: space-between);
+    margin: 2em;
+  }
+
+  .site-title {
+    flex-basis: 100%;
+    margin: .5em 0;
+    @media only screen and (min-width: $break){
+      margin: 0;
+      flex-basis: 20%;
+    }
+  }
+
+  nav {
+    flex-basis: 100%;
+    @media only screen and (min-width: $break){
+      flex-basis: 78%;
+    }
+  }
+}
