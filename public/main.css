@@ -568,12 +568,12 @@ a {
   text-align: left;
 }
 
-.beer-grid .beer-grid-table tr:hover {
-  background-color: #F0A800;
-}
-
 .beer-grid .beer-grid-table tr td {
   padding: .75em 0;
+}
+
+.beer-grid .beer-grid-table .beer-list-item:hover {
+  background-color: #F0A800;
 }
 
 .footer {

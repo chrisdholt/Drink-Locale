@@ -22,12 +22,14 @@
     }
 
     tr {
-      &:hover {
-        background-color: color('secondary', 'base');
-      }
-
       td {
         padding: .75em 0;
+      }
+    }
+
+    .beer-list-item {
+      &:hover {
+        background-color: color('secondary', 'base');
       }
     }
   }

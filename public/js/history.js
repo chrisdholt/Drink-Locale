@@ -174,7 +174,7 @@ $(document).ready(function() {
       }
       beerLink = '<a href="./beer.html?id=' + beer.id + '&style=' + beerStyle + '">' + beer.nameDisplay + '</a>';
       console.log(beerLink);
-      listing = '<tr><td class="name">' + beerLink + '</td>' + '<td>' + beer.breweries[0].name + '</td>' + '<td>' + beer.style.shortName + '</td>' + '<td>' + beerABV + '</td>' + '<td>' + beerIBU + '</td>' + '</tr>';
+      listing = '<tr class="beer-list-item"><td class="name">' + beerLink + '</td>' + '<td>' + beer.breweries[0].name + '</td>' + '<td>' + beer.style.shortName + '</td>' + '<td>' + beerABV + '</td>' + '<td>' + beerIBU + '</td>' + '</tr>';
       console.log(listing);
       $('.beer-grid-table').append(listing);
     });
