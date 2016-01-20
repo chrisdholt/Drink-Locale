@@ -941,9 +941,9 @@ a {
 @media only screen and (min-width: 50em) {
   .beer-detail-wrapper .beer-detail h2 {
     margin: .5em 0;
-    -webkit-flex-basis: 70%;
-    -ms-flex-preferred-size: 70%;
-    flex-basis: 70%;
+    -webkit-flex-basis: 65%;
+    -ms-flex-preferred-size: 65%;
+    flex-basis: 65%;
   }
 }
 
@@ -952,6 +952,9 @@ a {
   -ms-flex-order: 2;
   order: 2;
   margin: 1em .5em .5em .5em;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 @media only screen and (min-width: 50em) {
@@ -963,6 +966,9 @@ a {
     -ms-flex-preferred-size: 35%;
     flex-basis: 35%;
     margin: .5em 0 0 0;
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
   }
 }
 

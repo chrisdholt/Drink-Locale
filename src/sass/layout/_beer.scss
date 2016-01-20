@@ -22,17 +22,19 @@
       font-size: em(32);
       @media only screen and (min-width: $break){
         margin: .5em 0;
-        flex-basis: 70%;
+        flex-basis: 65%;
       }
     }
 
     figure {
       order: 2;
       margin: 1em .5em .5em .5em;
+      align-self: center;
       @media only screen and (min-width: $break){
         order: 5;
         flex-basis: 35%;
         margin: .5em 0 0 0;
+        align-self: flex-start;
       }
 
       img {
