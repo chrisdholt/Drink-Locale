@@ -338,7 +338,7 @@ var getRandomBeerByStyle = function(style){
         break;
     }
     $('.beer-grid-table').empty();
-    $('.beer-grid-table').append('<thead><tr class="browseTH"><th><h3>Beer Name</h3></th><th><h3>Brewery</h3></th><th><h3>Beer Style</h3></th><th class="abvTH"><h3>ABV</h3></th><th class="ibuTH"><h3>IBU</h3></th></tr></thead>');
+    $('.beer-grid-table').append('<thead><tr class="browseTH"><th><h3>Beer Name</h3></th><th><h3>Brewery</h3></th><th><h3>Style</h3></th><th class="abvTH"><h3>ABV</h3></th><th class="ibuTH"><h3>IBU</h3></th></tr></thead>');
 
     bucket.forEach(function(beer) {
       var beerABV = beer.abv;
@@ -351,14 +351,14 @@ var getRandomBeerByStyle = function(style){
       }
       var beerLink = '<a href="./beer.html?id=' + beer.id + '&style=' + style + '">' + beer.name + '</a>';
 
-      listing = '<tr><td class="name">' + beerLink + '</td>' + '<td>' + beer.breweries[0].name + '</td>' + '<td>' + beer.style.shortName + '</td>' + '<td>' + beerABV + '</td>' + '<td>' + beerIBU + '</td>' + '</tr>';
+      listing = '<tr class="beer-list-item"><td class="name">' + beerLink + '</td>' + '<td>' + beer.breweries[0].name + '</td>' + '<td>' + beer.style.shortName + '</td>' + '<td>' + beerABV + '</td>' + '<td>' + beerIBU + '</td>' + '</tr>';
 
       $('.beer-grid-table').append(listing);
     });
   };
 
  //Listener for the browse selector
-  $('.browseTarget').on('change', function(e){
+  $('.selector-box-target').on('change', function(e){
     requestBeersByStyle(e.target.value);
     setTimeout(function() {
       renderBrowseStyle(e.target.value);

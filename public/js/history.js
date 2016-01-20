@@ -161,7 +161,7 @@ $(document).ready(function() {
     var beerLink;
     var beerABV;
     var beerIBU;
-    $('.beer-grid-table').append('<thead><tr class="browseTH"><th><h3>Beer Name</h3></th><th><h3>Brewery</h3></th><th><h3>Beer Style</h3></th><th class="abvTH"><h3>ABV</h3></th><th class="ibuTH"><h3>IBU</h3></th></tr></thead>');
+    $('.beer-grid-table').append('<thead><tr class="browseTH"><th><h3>Name</h3></th><th><h3>Brewery</h3></th><th><h3>Style</h3></th><th class="abvTH"><h3>ABV</h3></th><th class="ibuTH"><h3>IBU</h3></th></tr></thead>');
     history.forEach(function(beer) {
       var beerStyle = getBeerStyle(beer);
       beerABV = beer.abv;

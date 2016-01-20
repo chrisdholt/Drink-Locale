@@ -2,7 +2,7 @@
   @include flex-box($align: center, $wrap: wrap, $direction: row, $justify: center);
   padding: .5em;
   @media only screen and (min-width: $break){
-    @include flex-box($align: center, $wrap: wrap, $direction: row, $justify: flex-start);
+    @include flex-box($align: center, $wrap: wrap, $direction: row, $justify: space-between);
     padding: 2em;
   }
 
@@ -10,10 +10,19 @@
     font-family: font-family('primary', 'regular');
     color: color('primary', 'base');
     font-size: em(32);
-    margin: 1em 0 0 0;
+    margin: 1em;
+    text-align: center;
 
     @media only screen and (min-width: $break){
-      margin: 0 0 0 .5em;
+      margin: 0 0 1em 0;
+    }
+  }
+
+  .selector-box {
+    margin: 1em;
+
+    @media only screen and (min-width: $break){
+      margin: 0 0 1em 0;
     }
   }
 

@@ -634,7 +634,7 @@ p {
 
 /* BROWSE */
 
-.main-browse {
+/*.main-browse {
   width: 100%;
   background-image: url(/images/randomBeer.jpg);
   background-repeat: no-repeat;
@@ -660,24 +660,24 @@ p {
   max-width: 100%;
   padding-left: 3%;
   padding-right: 3%;
-}
+}*/
 
-.browseSelector {
+/*.selector-box {
   background: white url(http://cdn.myfonts.net/s/images/iconsets/myfonts/header_menu_arrow.png) no-repeat right center;
   border: 1px solid #ffffff;
   display: block;
   overflow: hidden;
   width: 225px;
-}
 
-select {
-  font-family: 'Raleway', sans-serif;
-  background: transparent;
-  border: none;
-  width: 250px;
-}
+  select {
+    font-family: 'Raleway', sans-serif;
+    background: transparent;
+    border: none;
+    width: 250px;
+  }
+}*/
 
-
+/*
 
 .browse {
   color: white;
@@ -685,7 +685,7 @@ select {
   width: 100%;
   overflow: scroll;
   height: 410px;
-}
+}*/
 
 /*.browseTH {
   padding-top: 1%;
@@ -716,7 +716,7 @@ select {
 /*.beer-grid-table a:hover {
   color: gold;
 }*/
-
+/*
 .browseSelector {
   float: right;
   margin-top: 3%;
@@ -730,3 +730,4 @@ select {
   float: left;
 }
 
+*/

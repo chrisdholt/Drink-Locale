@@ -543,6 +543,21 @@ a {
   }
 }
 
+.selector-box {
+  background: white url(http://cdn.myfonts.net/s/images/iconsets/myfonts/header_menu_arrow.png) no-repeat right center;
+  border: 1px solid #ffffff;
+  display: block;
+  overflow: hidden;
+  width: 225px;
+}
+
+.selector-box select {
+  font-family: 'Raleway', sans-serif;
+  background: transparent;
+  border: none;
+  width: 250px;
+}
+
 .beer-grid {
   font-family: "Raleway-Regular", sans-serif;
   color: #ffffff;
@@ -569,7 +584,7 @@ a {
 }
 
 .beer-grid .beer-grid-table tr td {
-  padding: .75em 0;
+  padding: .75em .5em;
 }
 
 .beer-grid .beer-grid-table .beer-list-item:hover {
@@ -726,13 +741,13 @@ a {
     -moz-flex-direction: row;
     flex-direction: row;
     -ms-flex-direction: row;
-    box-pack: start;
-    -webkit-justify-content: flex-start;
-    -moz-justify-content: flex-start;
-    -ms-justify-content: flex-start;
-    -o-justify-content: flex-start;
-    justify-content: flex-start;
-    -ms-flex-pack: start;
+    box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
     padding: 2em;
   }
 }
@@ -741,12 +756,23 @@ a {
   font-family: "Raleway-Regular", sans-serif;
   color: #ffffff;
   font-size: 2em;
-  margin: 1em 0 0 0;
+  margin: 1em;
+  text-align: center;
 }
 
 @media only screen and (min-width: 50em) {
   .historyWrap h2 {
-    margin: 0 0 0 .5em;
+    margin: 0 0 1em 0;
+  }
+}
+
+.historyWrap .selector-box {
+  margin: 1em;
+}
+
+@media only screen and (min-width: 50em) {
+  .historyWrap .selector-box {
+    margin: 0 0 1em 0;
   }
 }
 

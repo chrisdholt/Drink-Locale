@@ -5,24 +5,26 @@
     <title>LocAle</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   </head>
   <body class="main-browse">
-    <div id="preloader">
+    <!-- REWRITE - If no token from local storage, write this into DOM -->
+<!--     <div id="preloader">
       <div id="status">&nbsp;</div>
     </div>
     <section id="ajaxLoad">
       <div id="loading" class="loading"></div>
     </section>
-    <section id='ageVerWrap' class="hide">
-      <section id='ageVer'>
+    <div id='ageVerWrap' class="hide">
+      <div id='ageVer'>
         <h1 class="ofAge">I Am Of Legal Drinking Age</h1>
         <p><button id="confirmY" class="ageBtn">YES</button>
         <button id='confirmNot' class="ageBtn">NO</button></p>
-      </section>
-    </section>
-    <header class="headWrap">
-      <a href="index.html"><h2 class="pageTitle">Loc<span class="ale">ale</span></h2></a>
+      </div>
+    </div> -->
+    <header class="header">
+      <h1 class="site-title"><a href="index.html">Loc<span class="ale">ale</span></a></h1>
       <nav>
         <ul class="main-nav">
           <li class="nav-link"><a href="about.html">About</a></li>
@@ -32,29 +34,31 @@
         </ul>
       </nav>
     </header>
-    <section class="browseWrap">
-      <h1 class="browseStyle">WHAT DO YOU WANT TO SEE?</h1>
-      <div class="browseSelector">
-        <select class="browseTarget">
-          <option selected="">Choose a style...</option>
-          <option value="ipa">IPA</option>
-          <option value="strongAle">Strong Ale</option>
-          <option value="stoutPorter">Stout/Porter</option>
-          <option value="scotch">Scotch Ale</option>
-          <option value="pale">Pale Ale</option>
-          <option value="lagerPilsner">Lager/Pilsner</option>
-          <option value="wheat">Wheat Ale</option>
-          <option value="belgian">Belgian</option>
-          <option value="sour">Sour</option>
-          <option value="bock">Bock</option>
-          <option value="misc">Other</option>
-        </select>
-      </div>
-      <div class="browse">
-        <table class="beer-grid-table">
-        </table>
-      </div>
-    </section>
+    <main>
+      <section class="historyWrap">
+        <h2>WHAT DO YOU WANT TO SEE?</h2>
+        <div class="selector-box">
+          <select class="selector-box-target">
+            <option selected="">Choose a style...</option>
+            <option value="ipa">IPA</option>
+            <option value="strongAle">Strong Ale</option>
+            <option value="stoutPorter">Stout/Porter</option>
+            <option value="scotch">Scotch Ale</option>
+            <option value="pale">Pale Ale</option>
+            <option value="lagerPilsner">Lager/Pilsner</option>
+            <option value="wheat">Wheat Ale</option>
+            <option value="belgian">Belgian</option>
+            <option value="sour">Sour</option>
+            <option value="bock">Bock</option>
+            <option value="misc">Other</option>
+          </select>
+        </div>
+        <div class="beer-grid">
+          <table class="beer-grid-table">
+          </table>
+        </div>
+      </section>
+    </main>
     <footer class="footer">
       <p>“Beer, it’s the best damn drink in the world.” - Jack Nicholson</p>
     </footer>
