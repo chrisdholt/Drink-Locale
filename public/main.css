@@ -973,7 +973,7 @@ a {
 }
 
 .beer-detail-wrapper .beer-detail figure img {
-  width: 100%;
+  max-width: 100%;
 }
 
 .beer-detail-wrapper .beer-detail h3 {
