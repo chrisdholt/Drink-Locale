@@ -1,0 +1,34 @@
+.beer-grid {
+  font-family: font-family('primary', 'regular');
+  color: color('primary', 'base');
+  width: 100%;
+  padding: 1em;
+  overflow-x: scroll;
+  @media only screen and (min-width: $break){
+    overflow: scroll;
+    height: 410px;
+  }
+
+  .beer-grid-table {
+    width: 100%;
+    @media only screen and (min-width: $break){
+
+    }
+
+    th {
+      padding-top: 1em;
+      border-bottom: 1px solid #F0A800;
+      text-align: left;
+    }
+
+    tr {
+      &:hover {
+        background-color: color('secondary', 'base');
+      }
+
+      td {
+        padding: .75em 0;
+      }
+    }
+  }
+}

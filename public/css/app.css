@@ -254,13 +254,8 @@ p {
 }
 
 .historyWrap {
-  position: relative;
-  display: block;
   max-width: 100%;
-  padding-top: 10%;
-  padding-bottom: 10%;
-  padding-right: 8%;
-  padding-left: 8%;
+  padding: 1em 6em 2em;
 }
 
 .historyContent {
@@ -299,10 +294,6 @@ p {
 .historyList a {
   text-decoration: none;
   color: white;
-}
-
-.historyList a:hover {
-  color: #F0A800;
 }
 
  /*AGE VERIFICATION
@@ -693,10 +684,10 @@ select {
   max-width: 100%;
   width: 100%;
   overflow: scroll;
-  height: 410px;;;
+  height: 410px;
 }
 
-.browseTH {
+/*.browseTH {
   padding-top: 1%;
   border-bottom: 1px solid #F0A800;
   text-align: left;
@@ -705,28 +696,26 @@ select {
 .abvTH {
   padding-right: 3%;
 
-}
-
-.browseTable {
+}*/
+/*
+.beer-grid-table {
   font-family: 'Raleway', sans-serif;
   color: white;
   width: 100%;
-}
+}*/
 
-.browseTable tr td {
-  padding-top: 1%;
-  padding-bottom: 1%;
-  border-bottom: 1px solid #F0A800;
+/*.beer-grid-table tr td {
+  padding: .75em 0;
 }
-
-.browseTable a {
+*/
+/*.beer-grid-table a {
   text-decoration: none;
   color: white;
-}
+}*/
 
-.browseTable a:hover {
+/*.beer-grid-table a:hover {
   color: gold;
-}
+}*/
 
 .browseSelector {
   float: right;

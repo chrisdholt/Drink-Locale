@@ -337,8 +337,8 @@ var getRandomBeerByStyle = function(style){
         sessionStorage.bucket = JSON.stringify(misc);
         break;
     }
-    $('.browseTable').empty();
-    $('.browseTable').append('<thead><tr class="browseTH"><th><h3>Beer Name</h3></th><th><h3>Brewery</h3></th><th><h3>Beer Style</h3></th><th class="abvTH"><h3>ABV</h3></th><th class="ibuTH"><h3>IBU</h3></th></tr></thead>');
+    $('.beer-grid-table').empty();
+    $('.beer-grid-table').append('<thead><tr class="browseTH"><th><h3>Beer Name</h3></th><th><h3>Brewery</h3></th><th><h3>Beer Style</h3></th><th class="abvTH"><h3>ABV</h3></th><th class="ibuTH"><h3>IBU</h3></th></tr></thead>');
 
     bucket.forEach(function(beer) {
       var beerABV = beer.abv;
@@ -353,7 +353,7 @@ var getRandomBeerByStyle = function(style){
 
       listing = '<tr><td class="name">' + beerLink + '</td>' + '<td>' + beer.breweries[0].name + '</td>' + '<td>' + beer.style.shortName + '</td>' + '<td>' + beerABV + '</td>' + '<td>' + beerIBU + '</td>' + '</tr>';
 
-      $('.browseTable').append(listing);
+      $('.beer-grid-table').append(listing);
     });
   };
 

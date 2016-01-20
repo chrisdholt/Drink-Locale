@@ -1,0 +1,26 @@
+.historyWrap {
+  @include flex-box($align: center, $wrap: wrap, $direction: row, $justify: center);
+  padding: .5em;
+  @media only screen and (min-width: $break){
+    @include flex-box($align: center, $wrap: wrap, $direction: row, $justify: flex-start);
+    padding: 2em;
+  }
+
+  h2 {
+    font-family: font-family('primary', 'regular');
+    color: color('primary', 'base');
+    font-size: em(32);
+    margin: 1em 0 0 0;
+
+    @media only screen and (min-width: $break){
+      margin: 0 0 0 .5em;
+    }
+  }
+
+  .beer-grid {
+
+    @media only screen and (min-width: $break){
+
+    }
+  }
+}
