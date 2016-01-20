@@ -158,18 +158,18 @@ a {
 }
 
 .btn-large, .btn-alt {
-  font-family: "Raleway-Bold", sans-serif;
+  font-family: "Raleway-Regular", sans-serif;
   padding: .5em 0;
   text-align: center;
   border: 2px solid;
   border-color: #ffffff;
+  width: 10em;
+  font-size: 1.375em;
 }
 
 .btn-large {
   background-color: rgba(0, 0, 0, 0.7);
-  font-size: 1.375em;
   color: #F0A800;
-  width: 10em;
 }
 
 .btn-large:hover {
@@ -180,8 +180,6 @@ a {
   background-color: #F0A800;
   color: #ffffff;
   border: none;
-  font-size: 1.375em;
-  padding: 1em;
 }
 
 .btn-alt:hover {
