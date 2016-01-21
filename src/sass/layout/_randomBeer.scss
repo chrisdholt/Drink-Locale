@@ -1,0 +1,32 @@
+.wrapper {
+
+  h2 {
+    font-family: font-family('primary', 'light');
+    color: color('primary', 'base');
+    font-size: em(32);
+    margin: 1em;
+    text-align: center;
+
+    @media only screen and (min-width: $break){
+      margin: 0 1em .75em 0;
+      text-align: left;
+    }
+  }
+
+  .selection-grid {
+    padding: 1em;
+    @include flex-box($align: center, $wrap: wrap, $direction: row, $justify: center);
+    @media only screen and (min-width: $break){
+      @include flex-box($align: center, $wrap: wrap, $direction: row, $justify: center);
+      padding: 1em 0;
+    }
+
+    .btn-large {
+      margin: .5em auto;
+
+      @media only screen and (min-width: $break){
+        margin: 1em auto;
+      }
+    }
+  }
+}

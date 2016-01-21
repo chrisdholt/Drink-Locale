@@ -3,50 +3,54 @@
   <head>
     <meta charset="UTF-8">
     <title>LocAle</title>
-    <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/app.css">
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   </head>
   <body class="main-beer">
-    <div id="preloader">
+    <!-- REWRITE - If no token from local storage, write this into DOM -->
+<!--     <div id="preloader">
       <div id="status">&nbsp;</div>
     </div>
     <section id="ajaxLoad">
       <div id="loading" class="loading"></div>
     </section>
-    <section id='ageVerWrap' class="hide">
-      <section id='ageVer'>
+    <div id='ageVerWrap' class="hide">
+      <div id='ageVer'>
         <h1 class="ofAge">I Am Of Legal Drinking Age</h1>
         <p><button id="confirmY" class="ageBtn">YES</button>
         <button id='confirmNot' class="ageBtn">NO</button></p>
-      </section>
-    </section>
-    <header class="headWrap">
-        <a href="index.html"><h2 class="pageTitle">Loc<span class="ale">ale</span></h2></a>
-      <section class="nav">
-        <ul>
-          <li class="navLink"><a class="underline" href="about.html">About Us</a></li>
-          <li class="navLink"><a class="underline" href="history.html">Beer History</a></li>
-          <li class="navLink"><a class="underline" href="randomBeer.html">Random Beer</a></li>
-          <li class="navLink"><a class="underline" href="browse.html">Browse</a></li>
+      </div>
+    </div> -->
+    <header class="header">
+      <h1 class="site-title"><a href="index.html">Loc<span class="ale">ale</span></a></h1>
+      <nav>
+        <ul class="main-nav">
+          <li class="nav-link"><a href="about.html">About</a></li>
+          <li class="nav-link"><a href="history.html">History</a></li>
+          <li class="nav-link"><a href="randomBeer.html">Random Beer</a></li>
+          <li class="nav-link"><a href="browse.html">Browse</a></li>
         </ul>
-      </section>
+      </nav>
     </header>
-    <section class="beerWrap">
-      <section class="beerContent">
-        <button id="similarBtn" class="simBtn">ANOTHER!</button>
-        <h1 id="beerName" class="beerName"></h1>
-        <img id="beerPic" class="beerPic" src="/images/beer.jpg">
-        <h3>DESCRIPTION</h3>
-        <p id="description"></p>
-        <p id="brewery"></p>
-        <p id="style"></p>
-        <p id="abv"></p>
-        <p id="ibu"></p>
-        <!-- <button id="similarBtn" class="simBtn">Show Me Something Similar</button> -->
+    <main>
+      <section class="beer-detail-wrapper">
+        <div class="beer-detail">
+          <a id="similarBtn" class="btn-large">Another!</a>
+          <h2 id="beerName" class="beerName"></h2>
+          <figure>
+            <img id="beerPic" src="/images/beer.jpg">
+          </figure>
+          <h3>DESCRIPTION</h3>
+          <div class="beer-desc">
+            <p id="description"></p>
+            <p id="brewery"></p>
+            <p id="style"></p>
+            <p id="abv"></p>
+            <p id="ibu"></p>
+          </div>
+        </div>
       </section>
-    </section>
+    </main>
     <footer class="footer">
       <p>“Beer, it’s the best damn drink in the world.” - Jack Nicholson</p>
     </footer>

@@ -1,0 +1,22 @@
+.card-container {
+  @include flex-box($align: center, $wrap: null, $direction: column, $justify: center);
+
+  @media only screen and (min-width: $break){
+    @include flex-box($align: center, $wrap: nowrap, $direction: row, $justify: center);
+  }
+
+  .card-primary {
+    flex-basis: 70%;
+    @media only screen and (min-width: $break){
+    flex-basis: 25%;
+    }
+  }
+
+  .card-secondary {
+    flex-basis: 70%;
+    @media only screen and (min-width: $break){
+      flex-basis: 20%;
+      margin: 2em auto;
+    }
+  }
+}

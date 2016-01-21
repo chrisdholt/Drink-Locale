@@ -1,0 +1,14 @@
+.selector-box {
+  background: white url(http://cdn.myfonts.net/s/images/iconsets/myfonts/header_menu_arrow.png) no-repeat right center;
+  border: 1px solid #ffffff;
+  display: block;
+  overflow: hidden;
+  width: 225px;
+
+  select {
+    font-family: 'Raleway', sans-serif;
+    background: transparent;
+    border: none;
+    width: 250px;
+  }
+}

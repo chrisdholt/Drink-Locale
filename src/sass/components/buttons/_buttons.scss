@@ -1,0 +1,31 @@
+%button-styles {
+  font-family: font-family('primary', 'regular');
+  padding: .5em 0;
+  text-align: center;
+  border: 2px solid;
+  border-color: color('primary', 'base');
+  width: 10em;
+  font-size: em(22);
+  cursor: pointer;
+}
+
+.btn-large {
+  @extend %button-styles;
+  background-color: rgba(0,0,0,0.7);
+  color: color('secondary', 'base');
+  &:hover {
+    background-color: color('primary', 'base');
+  }
+}
+
+.btn-alt {
+  @extend %button-styles;
+  background-color: color('secondary', 'base');
+  color: color('primary', 'base');
+  border: none;
+  &:hover {
+    background-color: color('primary', 'base');
+    color: color('secondary', 'base');
+  }
+}
+

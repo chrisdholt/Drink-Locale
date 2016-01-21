@@ -1,0 +1,48 @@
+.wrapper {
+  @include flex-box($align: center, $wrap: wrap, $direction: row, $justify: center);
+  padding: .5em;
+  @media only screen and (min-width: $break){
+    @include flex-box($align: center, $wrap: wrap, $direction: row, $justify: space-between);
+    padding: 2.5em 2em 1.85em 2em;
+  }
+
+  h2 {
+    font-family: font-family('primary', 'light');
+    color: color('primary', 'base');
+    font-size: em(32);
+    margin: 1em;
+    text-align: center;
+
+    @media only screen and (min-width: $break){
+      margin: 0 1em .75em 0;
+    }
+  }
+
+  p {
+    font-family: font-family('primary', 'light');
+    font-size: em(18);
+    color: color('primary', 'base');
+    margin: 1em;
+    text-align: center;
+    @media only screen and (min-width: $break){
+      margin: 0;
+      text-align: left;
+    }
+  }
+
+  .selector-box {
+    margin: 1em;
+
+    @media only screen and (min-width: $break){
+      margin: 0 1em 1.5em 0;
+    }
+  }
+
+  .beer-grid {
+    padding: 1em;
+
+    @media only screen and (min-width: $break){
+      padding: 1em 0;
+    }
+  }
+}

@@ -1,0 +1,1249 @@
+@charset "UTF-8";
+.icon-beer, .icon-history, .icon-search {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'locale' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-beer {
+  color: #ffffff;
+  font-size: 5.625em;
+}
+
+.icon-beer:before {
+  content: "";
+}
+
+.icon-history {
+  color: #ffffff;
+  font-size: 5.625em;
+}
+
+.icon-history:before {
+  content: "";
+}
+
+.icon-search {
+  color: #ffffff;
+  font-size: 5.625em;
+}
+
+.icon-search:before {
+  content: "";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li, a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, p, figure, blockquote {
+  margin: 0;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+select {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+
+@font-face {
+  font-family: 'locale';
+  src: url("/fonts/locale.eot?n54gim");
+  src: url("/fonts/locale.eot?n54gim#iefix") format("embedded-opentype"), url("/fonts/locale.ttf?n54gim") format("truetype"), url("/fonts/locale.woff?n54gim") format("woff"), url("/fonts/locale.svg?n54gim#locale") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+}
+
+@font-face {
+  font-family: "Raleway-Bold";
+  src: url("/fonts/Raleway-Bold.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+}
+
+@font-face {
+  font-family: "Raleway-ExtraLight";
+  src: url("/fonts/Raleway-ExtraLight.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+}
+
+@font-face {
+  font-family: "Raleway-ExtraLightItalic";
+  src: url("/fonts/Raleway-ExtraLightItalic.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+}
+
+@font-face {
+  font-family: "Raleway-Light";
+  src: url("/fonts/Raleway-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+}
+
+@font-face {
+  font-family: "Raleway-LightItalic";
+  src: url("/fonts/Raleway-LightItalic.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+}
+
+@font-face {
+  font-family: "Raleway-Medium";
+  src: url("/fonts/Raleway-Medium.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+}
+
+@font-face {
+  font-family: "Raleway-Regular";
+  src: url("/fonts/Raleway-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+}
+
+@font-face {
+  font-family: "Raleway-Thin";
+  src: url("/fonts/Raleway-Thin.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+}
+
+@font-face {
+  font-family: "Raleway-ThinItalic";
+  src: url("/fonts/Raleway-ThinItalic.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+}
+
+.btn-large, .btn-alt {
+  font-family: "Raleway-Regular", sans-serif;
+  padding: .5em 0;
+  text-align: center;
+  border: 2px solid;
+  border-color: #ffffff;
+  width: 10em;
+  font-size: 1.375em;
+  cursor: pointer;
+}
+
+.btn-large {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #F0A800;
+}
+
+.btn-large:hover {
+  background-color: #ffffff;
+}
+
+.btn-alt {
+  background-color: #F0A800;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-alt:hover {
+  background-color: #ffffff;
+  color: #F0A800;
+}
+
+.header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+  box-lines: single;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  box-orient: vertical;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  margin: 1em;
+}
+
+@media only screen and (min-width: 50em) {
+  .header {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-lines: single;
+    -moz-box-lines: single;
+    box-lines: single;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    box-orient: horizontal;
+    box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+    margin: 2em;
+  }
+}
+
+.header .site-title {
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  margin: .5em 0;
+}
+
+@media only screen and (min-width: 50em) {
+  .header .site-title {
+    margin: 0;
+    -webkit-flex-basis: 20%;
+    -ms-flex-preferred-size: 20%;
+    flex-basis: 20%;
+  }
+}
+
+.header nav {
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+@media only screen and (min-width: 50em) {
+  .header nav {
+    -webkit-flex-basis: 78%;
+    -ms-flex-preferred-size: 78%;
+    flex-basis: 78%;
+  }
+}
+
+.site-title {
+  text-decoration: none;
+  font-family: "Raleway-Medium", sans-serif;
+  font-size: 1.75em;
+  color: #F0A800;
+}
+
+.site-title:hover {
+  color: #F0A800;
+}
+
+.main-nav {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  box-orient: horizontal;
+  box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+}
+
+@media only screen and (min-width: 50em) {
+  .main-nav {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    box-orient: horizontal;
+    box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    box-pack: end;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    -ms-justify-content: flex-end;
+    -o-justify-content: flex-end;
+    justify-content: flex-end;
+    -ms-flex-pack: end;
+  }
+}
+
+.main-nav .nav-link a {
+  font-family: "Raleway-Medium", sans-serif;
+  font-size: 0.875em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0 .5em;
+}
+
+@media only screen and (min-width: 50em) {
+  .main-nav .nav-link a {
+    font-size: 1em;
+    margin: 0 1em;
+  }
+}
+
+.main-nav .nav-link a:hover {
+  color: #F0A800;
+}
+
+.main-home, .main-browse, .main-history, .main-beer, .main-random, .main-about, .main-error {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.main-home {
+  background-image: url(/images/HomePic.jpg);
+}
+
+.main-browse {
+  background-image: url(/images/randomBeer.jpg);
+}
+
+.main-history {
+  background-image: url(/images/beerPour.jpg);
+}
+
+.main-beer {
+  background-image: url(/images/beerBack.jpg);
+}
+
+.main-random {
+  background-image: url(/images/craftBeer.jpg);
+}
+
+.main-about {
+  background-image: url(/images/about.jpg);
+}
+
+.main-error {
+  background-image: url(/images/empty.jpg);
+}
+
+.card-primary {
+  padding: 2em;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 1.5em auto;
+}
+
+.card-primary a {
+  color: #ffffff;
+}
+
+.card-primary a:hover {
+  color: #F0A800;
+}
+
+.card-primary a:hover span {
+  color: #F0A800;
+}
+
+.card-primary a h2 {
+  font-family: "Raleway-Medium", sans-serif;
+  text-transform: uppercase;
+  margin: 1em 0;
+}
+
+.card-primary a p {
+  font-family: "Raleway-Light", sans-serif;
+  margin: 1em 0;
+}
+
+.card-secondary {
+  padding: .5em;
+  text-align: center;
+}
+
+@media only screen and (min-width: 50em) {
+  .card-secondary {
+    padding: 2em;
+  }
+}
+
+.card-secondary h3 {
+  font-family: "Raleway-Light", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 1em 0;
+}
+
+.card-secondary figure img {
+  max-width: 80%;
+}
+
+@media only screen and (min-width: 50em) {
+  .card-secondary figure img {
+    max-width: 100%;
+  }
+}
+
+.card-secondary p {
+  font-family: "Raleway-Light", sans-serif;
+  color: #ffffff;
+  margin: 1em 0;
+}
+
+.card-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  box-orient: vertical;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+}
+
+@media only screen and (min-width: 50em) {
+  .card-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-lines: single;
+    -moz-box-lines: single;
+    box-lines: single;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    box-orient: horizontal;
+    box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+  }
+}
+
+.card-container .card-primary {
+  -webkit-flex-basis: 70%;
+  -ms-flex-preferred-size: 70%;
+  flex-basis: 70%;
+}
+
+@media only screen and (min-width: 50em) {
+  .card-container .card-primary {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+  }
+}
+
+.card-container .card-secondary {
+  -webkit-flex-basis: 70%;
+  -ms-flex-preferred-size: 70%;
+  flex-basis: 70%;
+}
+
+@media only screen and (min-width: 50em) {
+  .card-container .card-secondary {
+    -webkit-flex-basis: 20%;
+    -ms-flex-preferred-size: 20%;
+    flex-basis: 20%;
+    margin: 2em auto;
+  }
+}
+
+.selector-box {
+  background: white url(http://cdn.myfonts.net/s/images/iconsets/myfonts/header_menu_arrow.png) no-repeat right center;
+  border: 1px solid #ffffff;
+  display: block;
+  overflow: hidden;
+  width: 225px;
+}
+
+.selector-box select {
+  font-family: 'Raleway', sans-serif;
+  background: transparent;
+  border: none;
+  width: 250px;
+}
+
+.beer-grid {
+  font-family: "Raleway-Regular", sans-serif;
+  color: #ffffff;
+  width: 100%;
+  overflow-x: scroll;
+  min-height: 18.75em;
+}
+
+@media only screen and (min-width: 50em) {
+  .beer-grid {
+    overflow: scroll;
+    height: 25em;
+  }
+}
+
+.beer-grid .beer-grid-table {
+  width: 100%;
+}
+
+.beer-grid .beer-grid-table th {
+  font-family: "Raleway-Medium", sans-serif;
+  font-size: 1.125em;
+  padding: 0 .5em .5em;
+  border-bottom: 1px solid #F0A800;
+  text-align: left;
+}
+
+.beer-grid .beer-grid-table tr td {
+  padding: .75em .5em;
+}
+
+.beer-grid .beer-grid-table tr td:last-child {
+  padding: .75em .65em;
+}
+
+.beer-grid .beer-grid-table .beer-list-item:hover {
+  background-color: #F0A800;
+}
+
+.footer {
+  position: relative;
+  padding: 1em;
+  margin: 0 auto;
+  width: 100%;
+  background-color: white;
+}
+
+@media only screen and (min-width: 50em) {
+  .footer {
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+.footer p {
+  font-family: "Raleway-Light", sans-serif;
+  text-align: center;
+}
+
+.main-home .card-container {
+  padding: 0 4em;
+}
+
+@media only screen and (min-width: 50em) {
+  .main-home .card-container {
+    padding: 2em 0 3em 0;
+  }
+}
+
+.wrapper h2 {
+  font-family: "Raleway-Light", sans-serif;
+  color: #ffffff;
+  font-size: 2em;
+  margin: 1em;
+  text-align: center;
+}
+
+@media only screen and (min-width: 50em) {
+  .wrapper h2 {
+    margin: 0 1em .75em 0;
+    text-align: left;
+  }
+}
+
+.wrapper .selection-grid {
+  padding: 1em;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  box-orient: horizontal;
+  box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+}
+
+@media only screen and (min-width: 50em) {
+  .wrapper .selection-grid {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    box-orient: horizontal;
+    box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    padding: 1em 0;
+  }
+}
+
+.wrapper .selection-grid .btn-large {
+  margin: .5em auto;
+}
+
+@media only screen and (min-width: 50em) {
+  .wrapper .selection-grid .btn-large {
+    margin: 1em auto;
+  }
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  box-orient: horizontal;
+  box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  padding: .5em;
+}
+
+@media only screen and (min-width: 50em) {
+  .wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    box-orient: horizontal;
+    box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+    padding: 2.5em 2em 1.85em 2em;
+  }
+}
+
+.wrapper h2 {
+  font-family: "Raleway-Light", sans-serif;
+  color: #ffffff;
+  font-size: 2em;
+  margin: 1em;
+  text-align: center;
+}
+
+@media only screen and (min-width: 50em) {
+  .wrapper h2 {
+    margin: 0 1em .75em 0;
+  }
+}
+
+.wrapper p {
+  font-family: "Raleway-Light", sans-serif;
+  font-size: 1.125em;
+  color: #ffffff;
+  margin: 1em;
+  text-align: center;
+}
+
+@media only screen and (min-width: 50em) {
+  .wrapper p {
+    margin: 0;
+    text-align: left;
+  }
+}
+
+.wrapper .selector-box {
+  margin: 1em;
+}
+
+@media only screen and (min-width: 50em) {
+  .wrapper .selector-box {
+    margin: 0 1em 1.5em 0;
+  }
+}
+
+.wrapper .beer-grid {
+  padding: 1em;
+}
+
+@media only screen and (min-width: 50em) {
+  .wrapper .beer-grid {
+    padding: 1em 0;
+  }
+}
+
+.beer-detail-wrapper {
+  padding: 2em;
+}
+
+@media only screen and (min-width: 50em) {
+  .beer-detail-wrapper {
+    padding: 2.5em 2em 1.85em 2em;
+  }
+}
+
+.beer-detail-wrapper .beer-detail {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  box-orient: vertical;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 2em;
+  text-align: center;
+}
+
+@media only screen and (min-width: 50em) {
+  .beer-detail-wrapper .beer-detail {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    box-orient: horizontal;
+    box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+    padding: 1em;
+    text-align: left;
+  }
+}
+
+.beer-detail-wrapper .beer-detail h2 {
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  font-family: "Raleway-Medium", sans-serif;
+  font-size: 2em;
+}
+
+@media only screen and (min-width: 50em) {
+  .beer-detail-wrapper .beer-detail h2 {
+    margin: .5em 0;
+    -webkit-flex-basis: 65%;
+    -ms-flex-preferred-size: 65%;
+    flex-basis: 65%;
+  }
+}
+
+.beer-detail-wrapper .beer-detail figure {
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+  margin: 1em .5em .5em .5em;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+@media only screen and (min-width: 50em) {
+  .beer-detail-wrapper .beer-detail figure {
+    -webkit-order: 5;
+    -ms-flex-order: 5;
+    order: 5;
+    -webkit-flex-basis: 35%;
+    -ms-flex-preferred-size: 35%;
+    flex-basis: 35%;
+    margin: .5em 0 0 0;
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+}
+
+.beer-detail-wrapper .beer-detail figure img {
+  max-width: 100%;
+}
+
+.beer-detail-wrapper .beer-detail h3 {
+  -webkit-order: 3;
+  -ms-flex-order: 3;
+  order: 3;
+  font-family: "Raleway-Medium", sans-serif;
+  text-transform: uppercase;
+  margin: .5em 0;
+}
+
+@media only screen and (min-width: 50em) {
+  .beer-detail-wrapper .beer-detail h3 {
+    -webkit-flex-basis: 90%;
+    -ms-flex-preferred-size: 90%;
+    flex-basis: 90%;
+    margin: 0 0 .5em 0;
+  }
+}
+
+.beer-detail-wrapper .beer-detail .beer-desc {
+  -webkit-order: 4;
+  -ms-flex-order: 4;
+  order: 4;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+@media only screen and (min-width: 50em) {
+  .beer-detail-wrapper .beer-detail .beer-desc {
+    -webkit-flex-basis: 60%;
+    -ms-flex-preferred-size: 60%;
+    flex-basis: 60%;
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+}
+
+.beer-detail-wrapper .beer-detail .beer-desc p {
+  font-family: "Raleway-Light", sans-serif;
+  font-size: 1em;
+  margin: 1em 0;
+}
+
+@media only screen and (min-width: 50em) {
+  .beer-detail-wrapper .beer-detail .beer-desc p {
+    font-size: 0.875em;
+    margin: 1em 0;
+  }
+}
+
+.beer-detail-wrapper .beer-detail .beer-desc p strong {
+  font-family: "Raleway-Medium", sans-serif;
+}
+
+.beer-detail-wrapper .beer-detail .btn-large {
+  -webkit-order: 6;
+  -ms-flex-order: 6;
+  order: 6;
+}
+
+@media only screen and (min-width: 50em) {
+  .beer-detail-wrapper .beer-detail .btn-large {
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+}
+
+.main-about .card-container {
+  padding: 2em;
+}
+
+@media only screen and (min-width: 50em) {
+  .main-about .card-container {
+    padding: 0;
+  }
+}
+
+.main-error {
+  background-position-x: 20%;
+}
+
+.main-error section {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+  box-lines: single;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  box-orient: vertical;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  margin: 4em;
+  text-align: center;
+}
+
+@media only screen and (min-width: 50em) {
+  .main-error section {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    -o-align-items: flex-start;
+    align-items: flex-start;
+    -ms-flex-align: start;
+    -webkit-box-lines: single;
+    -moz-box-lines: single;
+    box-lines: single;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    box-orient: vertical;
+    box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    text-align: left;
+  }
+}
+
+.main-error section h1 {
+  font-family: "Raleway-Bold", sans-serif;
+  color: #ffffff;
+  font-size: 7.5em;
+}
+
+@media only screen and (min-width: 50em) {
+  .main-error section h1 {
+    font-size: 11.25em;
+  }
+}
+
+.main-error section p {
+  font-family: "Raleway-Medium", sans-serif;
+  color: #ffffff;
+  font-size: 2.625em;
+  margin: 1em 0;
+}
+
+@media only screen and (min-width: 50em) {
+  .main-error section p {
+    font-size: 3em;
+  }
+}
+
+.main-error section .btn-alt {
+  margin: 0 0 4em 0;
+}
+
+@media only screen and (min-width: 50em) {
+  .main-error section .btn-alt {
+    margin: 0;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

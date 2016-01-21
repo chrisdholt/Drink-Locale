@@ -1,0 +1,10 @@
+.site-title {
+  text-decoration: none;
+  font-family: font-family('primary', 'medium');
+  font-size: em(28);
+  color: color('secondary', 'base');
+
+  &:hover {
+    color: color('secondary', 'base');
+  }
+}

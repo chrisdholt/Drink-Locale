@@ -1,0 +1,58 @@
+.card-primary {
+  padding: 2em;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 1.5em auto;
+
+  a {
+    color: color('primary', 'base');
+
+    &:hover {
+      color: color('secondary', 'base');
+
+      span {
+        color: color('secondary', 'base');
+      }
+    }
+
+    h2 {
+      font-family: font-family('primary', 'medium');
+      text-transform: uppercase;
+      margin: 1em 0;
+    }
+
+    p {
+      font-family: font-family('primary', 'light');
+      margin: 1em 0;
+    }
+  }
+}
+
+.card-secondary {
+  padding: .5em;
+  text-align: center;
+  @media only screen and (min-width: $break){
+    padding: 2em;
+  }
+  h3 {
+    font-family: font-family('primary', 'light');
+    color: color('primary', 'base');
+    text-transform: uppercase;
+    margin: 1em 0;
+  }
+
+  figure {
+    img {
+      max-width: 80%;
+      @media only screen and (min-width: $break){
+        max-width: 100%;
+      }
+    }
+  }
+
+  p {
+    font-family: font-family('primary', 'light');
+    color: color('primary', 'base');
+    margin: 1em 0;
+  }
+}
