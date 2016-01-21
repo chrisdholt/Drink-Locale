@@ -310,11 +310,22 @@ select {
   text-decoration: none;
   font-family: "Raleway-Medium", sans-serif;
   font-size: 1.75em;
+}
+
+.site-title a span:first-child {
+  color: #ffffff;
+}
+
+.site-title a span:nth-child(2) {
   color: #F0A800;
 }
 
-.site-title:hover {
+.site-title a:hover span:first-child {
   color: #F0A800;
+}
+
+.site-title a:hover span:nth-child(2) {
+  color: #ffffff;
 }
 
 .main-nav {

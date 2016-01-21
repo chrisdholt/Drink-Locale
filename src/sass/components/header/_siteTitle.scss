@@ -2,9 +2,23 @@
   text-decoration: none;
   font-family: font-family('primary', 'medium');
   font-size: em(28);
-  color: color('secondary', 'base');
 
-  &:hover {
-    color: color('secondary', 'base');
+  a {
+    span {
+      &:first-child {
+        color: color('primary', 'base');
+      }
+      &:nth-child(2){
+        color: color('secondary', 'base');
+      }
+    }
+    &:hover {
+       span:first-child {
+        color: color('secondary', 'base');
+       }
+       span:nth-child(2) {
+        color: color('primary', 'base');
+       }
+      }
   }
 }
