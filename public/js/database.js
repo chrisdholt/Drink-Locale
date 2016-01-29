@@ -272,9 +272,9 @@ var getRandomBeerByStyle = function(style){
 
   //Event Listener for Beer.html show me something similar button//
   $('#similarBtn').on('click', function(){
-    $(document).ajaxStart(function() {
-      $('#loading').fadeIn(1000);
-    });
+    // $(document).ajaxStart(function() {
+    //   $('#loading').fadeIn(1000);
+    // });
     var beerStyle = getUserInput('style');
     requestBeersByStyle(beerStyle);
     setTimeout(function() {
@@ -282,7 +282,7 @@ var getRandomBeerByStyle = function(style){
       var beerId = beer.id;
 
       window.open('beer.html' + '?id=' + beerId + '&style=' + beerStyle, '_self');
-    }, 1000);
+    }, 'fast');
   });
 
 
