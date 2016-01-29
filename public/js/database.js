@@ -282,7 +282,7 @@ var getRandomBeerByStyle = function(style){
       var beerId = beer.id;
 
       window.open('beer.html' + '?id=' + beerId + '&style=' + beerStyle, '_self');
-    }, 7000);
+    }, 1000);
   });
 
 
